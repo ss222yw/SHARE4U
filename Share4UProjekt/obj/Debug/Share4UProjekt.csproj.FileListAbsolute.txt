@@ -1,0 +1,147 @@
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Share4UProjekt.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Share4UProjekt.pdb
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Antlr3.Runtime.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\EntityFramework.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\System.Web.Optimization.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\System.Web.Providers.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\WebGrease.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\EntityFramework.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\ASPSnippets.FaceBookAPI.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Facebook.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\FB.dll
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\Facebook.xml
+c:\users\sahib\documents\visual studio 2012\Projects\Share4UProjekt\bin\FB.pdb
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Share4UProjekt.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Share4UProjekt.pdb
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Antlr3.Runtime.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\EntityFramework.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\System.Web.Optimization.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\System.Web.Providers.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\WebGrease.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Facebook.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\FB.pdb
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\EntityFramework.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+C:\Users\ss222yw.LNU\Desktop\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+G:\New folder (3)\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+G:\New folder (3)\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+G:\New folder (3)\Share4UProjekt\bin\Share4UProjekt.dll
+G:\New folder (3)\Share4UProjekt\bin\Share4UProjekt.pdb
+G:\New folder (3)\Share4UProjekt\bin\Antlr3.Runtime.dll
+G:\New folder (3)\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+G:\New folder (3)\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+G:\New folder (3)\Share4UProjekt\bin\ASPSnippets.FaceBookAPI.dll
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+G:\New folder (3)\Share4UProjekt\bin\EntityFramework.dll
+G:\New folder (3)\Share4UProjekt\bin\Facebook.dll
+G:\New folder (3)\Share4UProjekt\bin\FB.dll
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+G:\New folder (3)\Share4UProjekt\bin\System.Web.Optimization.dll
+G:\New folder (3)\Share4UProjekt\bin\System.Web.Providers.dll
+G:\New folder (3)\Share4UProjekt\bin\WebGrease.dll
+G:\New folder (3)\Share4UProjekt\bin\Facebook.xml
+G:\New folder (3)\Share4UProjekt\bin\FB.pdb
+G:\New folder (3)\Share4UProjekt\bin\EntityFramework.xml
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+G:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+G:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+G:\New folder (3)\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+F:\New folder (3)\Share4UProjekt\bin\Share4UProjekt.dll
+F:\New folder (3)\Share4UProjekt\bin\Share4UProjekt.pdb
+F:\New folder (3)\Share4UProjekt\bin\Antlr3.Runtime.dll
+F:\New folder (3)\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+F:\New folder (3)\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\New folder (3)\Share4UProjekt\bin\EntityFramework.dll
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+F:\New folder (3)\Share4UProjekt\bin\System.Web.Optimization.dll
+F:\New folder (3)\Share4UProjekt\bin\System.Web.Providers.dll
+F:\New folder (3)\Share4UProjekt\bin\WebGrease.dll
+F:\New folder (3)\Share4UProjekt\bin\Facebook.xml
+F:\New folder (3)\Share4UProjekt\bin\FB.pdb
+F:\New folder (3)\Share4UProjekt\bin\EntityFramework.xml
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\New folder (3)\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+F:\New folder (3)\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+F:\New folder (3)\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+F:\New folder (3)\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+F:\New folder (3)\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+F:\New folder (3)\Share4UProjekt\bin\ASPSnippets.FaceBookAPI.dll
