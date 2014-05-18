@@ -1,5 +1,4 @@
-/* =Skitter styles
------------------------------------------------ */
+
 .box_skitter {
 	position: relative;
 	width: 800px;
@@ -9,7 +8,7 @@
 
 .box_skitter img {
 	max-width: none;
-} /* Tip for stildv */
+} 
 .box_skitter ul {
 	display: none;
 }
@@ -27,8 +26,6 @@
 	display: none;
 }
 
-/* =Box clone
--------------------------------------------------------------- */
 .box_skitter .box_clone {
 	position: absolute;
 	top: 0;
@@ -46,8 +43,6 @@
 	z-index: 20;
 }
 
-/* =Navigation
--------------------------------------------------------------- */
 .box_skitter .prev_button {
 	position: absolute;
 	top: 50%;
@@ -82,8 +77,6 @@
 	opacity: 0.5 !important;
 }
 
-/* =Numbers
--------------------------------------------------------------- */
 .box_skitter .info_slide {
 	position: absolute;
 	top: 15px;
@@ -124,9 +117,7 @@
 	margin: 0 5px 0 0;
 }
 
-/* =Thumbs
-	Change width and height to customization dimension thumb
--------------------------------------------------------------- */
+
 .box_skitter .container_thumbs {
 	position: relative;
 	overflow: hidden;
@@ -185,8 +176,6 @@
 	border: 0px solid #333;
 }
 
-/* =Dots
--------------------------------------------------------------- */
 .box_skitter .info_slide_dots {
 	position: absolute;
 	bottom: -40px;
@@ -224,8 +213,7 @@
 	margin: 0 5px 0 0;
 }
 
-/* =Loading
--------------------------------------------------------------- */
+
 .loading {
 	position: absolute;
 	top: 50%;
@@ -240,8 +228,7 @@
 	height: 32px;
 }
 
-/* =Label
--------------------------------------------------------------- */
+
 .box_skitter .label_skitter {
 	z-index: 150;
 	position: absolute;
@@ -279,8 +266,6 @@
 	border-radius: 20px;
 }
 
-/* =Preview slide
--------------------------------------------------------------- */
 .box_skitter .preview_slide {
 	display: none;
 	position: absolute;
@@ -327,8 +312,7 @@
 	width: auto !important;
 }
 
-/* =Focus
--------------------------------------------------------------- */
+
 #overlay_skitter {
 	position: absolute;
 	top: 0;
@@ -381,8 +365,7 @@
 	opacity: 0.5 !important;
 }
 
-/* =Example for dimenions
--------------------------------------------------------------- */
+
 .box_skitter_large {
 	width: 800px;
 	height: 300px;
@@ -393,8 +376,7 @@
 	height: 100px;
 }
 
-/* =Default theme
--------------------------------------------------------------- */
+
 .box_skitter .focus_button, 
 .box_skitter .next_button, 
 .box_skitter .prev_button, 
@@ -434,8 +416,6 @@
 	height: 42px;
 }
 
-/* =Minimalist theme
--------------------------------------------------------------- */
 .skitter-minimalist .prev_button, 
 .skitter-minimalist .next_button, 
 .skitter-minimalist .play_pause_button, 
@@ -502,8 +482,6 @@
 	box-shadow: rgba(255,255,255,0.2) 1px 1px 0;
 }
 
-/* =Round theme
--------------------------------------------------------------- */
 .skitter-round .prev_button, 
 .skitter-round .next_button, 
 .skitter-round .play_pause_button, 
@@ -595,8 +573,7 @@
 	box-shadow: rgba(255,255,255,0.3) 1px 1px 0;
 }
 
-/* =Clean theme
--------------------------------------------------------------- */
+
 .skitter-clean .prev_button, 
 .skitter-clean .next_button, 
 .skitter-clean .play_pause_button, 
@@ -684,8 +661,7 @@
 	box-shadow: rgba(0,0,0,0.5) 1px 1px 0;
 }
 
-/* =Square theme
--------------------------------------------------------------- */
+
 
 .skitter-square .play_pause_button, 
 .skitter-square .next_button, 

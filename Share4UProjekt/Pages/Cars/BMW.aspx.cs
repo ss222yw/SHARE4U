@@ -13,7 +13,7 @@ namespace Share4UProjekt.Pages.Cars
 {
     public partial class BMW : System.Web.UI.Page
     {
-         private Service _service;
+        private Service _service;
 
         // Service skapas först då det behövs för första gången.
         private Service Service
@@ -21,7 +21,7 @@ namespace Share4UProjekt.Pages.Cars
             get { return _service ?? (_service = new Service()); }
         }
 
-   
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

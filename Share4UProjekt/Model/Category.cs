@@ -7,7 +7,7 @@ namespace Share4UProjekt.Model
 {
     public class Category
     {
-        public int KategoriID { get; set; }
         public string Kategori { get; set; }
+        public int KategoriID { get; set; }
     }
 }

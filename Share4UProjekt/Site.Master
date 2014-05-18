@@ -1,14 +1,14 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Share4UProjekt.SiteMaster" ViewStateMode="Disabled" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head runat="server">
+ <!DOCTYPE html >
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <head runat="server">
     <meta charset="utf-8" />
-    <title>Share4U</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>share4u.me</title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/carFavicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
@@ -23,7 +23,7 @@
             $('#main-image-box').children().removeClass('facets').end().facets({
                 control: 'ul#mainlevel',
                 clipSpacing: 1,
-                animationSpeed: 400,
+                animationSpeed: 1000,
                 beforeMax: function (index) {
                     $('#main-image-box .clip:eq(' + index + ') .container').show();
                 },
@@ -33,18 +33,23 @@
             });
         });
     </script>
+
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 
-</head>
-<body>
+ </head>
+ <body>
+
+    <%-- Facebook Like box--%>
     <div id="fbplace">
         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Share4U/646540078759230?skip_nax_wizard=true" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
     </div>
+
     <form runat="server">
+
+         <%--Meny--%>
         <div id="navigation-panel">
             <div class="menu">
                 <ul class="menu" id="mainlevel">
-
                     <li>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>">HEM</asp:HyperLink><ul>
                         </ul>
@@ -55,7 +60,7 @@
                     <li>
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink><ul>
                             <li>
-                                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
+                               <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
                         </ul>
                     </li>
                     <li>
@@ -89,8 +94,7 @@
 
         </div>
 
-
-
+        <%--Bil märke meny--%>
         <div id="sideCars">
             <div class="menu2">
                 <ul class="menu2" id="Ul1">
@@ -168,6 +172,8 @@
                                 <asp:HyperLink ID="HyperLink42" runat="server" NavigateUrl="<%$ RouteUrl:routename=Volkswagen %>">Volkswagen</asp:HyperLink></li>
                             <li>
                                 <asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="<%$ RouteUrl:routename=VOLVO %>">Volvo</asp:HyperLink></li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="<%$ RouteUrl:routename=Ovriga %>">Övriga</asp:HyperLink></li>
                         </ul>
 
                     </li>
@@ -176,12 +182,14 @@
         </div>
 
 
+        <%--Sök funktion button--%>
+        <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" />
+        <asp:Image ID="searchicon" src="Images2/searchicon.png" alt="searchicon" title="searchicon" runat="server" /><asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter bild namn eller rubrik" Text=""></asp:TextBox>
+        <asp:Label ID="SearchResult" runat="server" CssClass="SearchResult" Visible="false"></asp:Label>
 
-
-
+       <%-- Inloggning system via facebook--%>
         <div>
-            <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/Log in.png" OnClick="Login" CssClass="btnLogin" />
-
+            <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/Log in.png" OnClick="Login" CssClass="btnLogin"  CausesValidation="false"/>
             <asp:Label ID="Label2" runat="server">
                 <asp:Panel ID="pnlFbUser" runat="server" Visible="false">
                     <table>
@@ -197,7 +205,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <asp:ImageButton ID="btnLogout" runat="server" ImageUrl="Images2/facebook-logout.gif" OnClick="Logout" CssClass="btnLogout" />
+                                <asp:ImageButton ID="btnLogout" runat="server" ImageUrl="Images2/facebook-logout.gif" OnClick="Logout" CssClass="btnLogout"  CausesValidation="false"/>
                             </td>
                         </tr>
                     </table>
@@ -205,6 +213,7 @@
             </asp:Label>
         </div>
 
+        <%--ScriptManager--%>
         <asp:Label ID="lblCounter" runat="server"></asp:Label>
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -222,8 +231,12 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
             </Scripts>
         </asp:ScriptManager>
+
         <header>
+
         </header>
+
+        
         <div id="Div1"></div>
         <script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -231,39 +244,52 @@
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&appId=1407528266185362&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));</script>
 
         <div id="Div2">
             <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
             <section class="content-wrapper main-content clear-fix">
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                <asp:Label ID="searchLbl" runat="server" Text=""></asp:Label>
+               <%-- Resultatet av sök funktionen--%>
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <div class="imgPhotoTitle">
+                            <%#DataBinder.Eval(Container.DataItem, "Title")%>
+                            <%#DataBinder.Eval(Container.DataItem, "ImgName")%>
+                        </div>
+                        <asp:Image ImageUrl='<%# "Images/" + DataBinder.Eval(Container.DataItem, "ImgName") %>' ID="imgUserPhoto" runat="server" alt="bilder." CssClass="imgUserPhoto2" /><br />
+                    </ItemTemplate>
+                </asp:Repeater>
+
             </section>
+
+            <%--Knapp för att gå tillbaka till start sidan--%>
             <div class="pil">
                 <a href="#">
-                    <img id="top" src="../../Images2/pil11new.png" alt="pil" title="Tillbaka till toppen?TRYCK!" width="20" height="20"></a>
+                    <img id="top" src="../../Images2/pil11new.png" alt="pil" title="Tillbaka till toppen?TRYCK!" width="20" height="20" /></a>
             </div>
+
             <div class="followUs">
                 <footer>
 
-                    <!-- Knapp som tar dig längst upp på sidan -->
+                    <%--Logo för instagram--%>
                     <a href="http://instagram.com/share4u.me" target="_blank" title="följ oss på instagram!">
                         <img id="inst" src="../../Images2/inst.png" alt="Klicka här för att besöka vår instagram-sida" width="30" height="30" /></a>
-                    <div id="twet">
 
+                    <%--Logo för Twitter--%>
+                    <div id="twet">
                         <a href="https://twitter.com" target="_blank" title="följ oss på Twitter!">
                             <img id="twit" src="../../Images2/twitter.png" alt="Klicka här för att besöka vår twitter-sida" width="40" height="40" /></a>
                     </div>
-                    <p>&copy; <%: DateTime.Now.Date.ToString("yyyy/MM/dd") %> - Sahib Sahib ss222yw UD13 LNU.</p>
+                    <p>&copy; <%: DateTime.Now.Date.ToString("yyyy/MM/dd") %> - Sahib Sahib ss222yw UD13 <a  href="http://www.lnu.se/">LNU</a>.</p>
 
-
-
+                    <%--Facebook logo för följ--%>
                     <div class="fb-follow" data-href="https://www.facebook.com/pages/Share4U/646540078759230?skip_nax_wizard=true" data-colorscheme="light" data-layout="standard" data-show-faces="true"></div>
 
                 </footer>
-
             </div>
         </div>
     </form>
-
 </body>
 </html>

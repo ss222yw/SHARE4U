@@ -9,6 +9,9 @@ namespace Share4UProjekt
 {
     internal static class AuthConfig
     {
+        /// <summary>
+        /// Metod innehållande applikation id och hemligt id.
+        /// </summary>
         public static void RegisterOpenAuth()
         {
             FaceBookConnect.API_Key = "1407528266185362";

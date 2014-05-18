@@ -14,6 +14,8 @@ using Facebook.Reflection;
 using ASPSnippets.FaceBookAPI;
 using FB;
 using Share4UProjekt.Model;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace Share4UProjekt
 {
@@ -37,7 +39,7 @@ namespace Share4UProjekt
             }
         }
 
-        public string Code { get { return ((SiteMaster)this.Master).Code; } }
+        public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
 
         private static string fromRootToPhoto = Path.Combine(
                 AppDomain.CurrentDomain.GetData("APPBASE").ToString(),
@@ -62,7 +64,7 @@ namespace Share4UProjekt
                 Session.Remove("Message");
             }
 
-            if (Code != null)
+            if (Access_Token != null)
             {
                 CategoryDropDownList.Visible = true;
             }
@@ -71,7 +73,6 @@ namespace Share4UProjekt
                 lblStatus.Text = "Du måste vara inloggad för att kunna se mina sidor!";
                 fuUpload.Visible = false;
                 btnUpload.Visible = false;
-                btnDelete.Visible = false;
                 CategoryDropDownList.Visible = false;
                 ImgListView.Visible = false;
                 TitleTextBox.Visible = false;
@@ -81,103 +82,89 @@ namespace Share4UProjekt
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-
-            if (TitleTextBox.Text != string.Empty)
+            if (IsValid)
             {
-
-                if (fuUpload.HasFile)
+                if (TitleTextBox.Text != string.Empty)
                 {
 
-
-                    if ((fuUpload.PostedFile.ContentType == "image/png") ||
-                         (fuUpload.PostedFile.ContentType == "image/jpeg") ||
-                        (fuUpload.PostedFile.ContentType == "image/jpg") ||
-                         (fuUpload.PostedFile.ContentType == "image/gif"))
+                    if (fuUpload.HasFile && fuUpload.PostedFile != null)
                     {
-                        if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)
+                        if (fuUpload.FileName.Length <= 100)
                         {
-                            string imgFolder = Path.Combine(fromRootToPhoto, User.Identity.Name);
-                            int count = 1;
-                            string f = fuUpload.FileName;
-                            if (Exists(f))
+
+                            if ((fuUpload.PostedFile.ContentType == "image/png") ||
+                                 (fuUpload.PostedFile.ContentType == "image/jpeg") ||
+                                (fuUpload.PostedFile.ContentType == "image/jpg") ||
+                                 (fuUpload.PostedFile.ContentType == "image/gif"))
                             {
-
-                                string extension = Path.GetExtension(f);
-                                string nameOnly = Path.GetFileNameWithoutExtension(f);
-                                while (Exists(f))
+                                if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)
                                 {
-                                    f = string.Format("{0}({1}){2}", nameOnly, count, extension);
-                                    count++;
+                                    string imgFolder = Path.Combine(fromRootToPhoto, User.Identity.Name);
+                                    int count = 1;
+                                    string f = fuUpload.FileName;
+                                    if (Exists(f))
+                                    {
 
+                                        string extension = Path.GetExtension(f);
+                                        string nameOnly = Path.GetFileNameWithoutExtension(f);
+                                        while (Exists(f))
+                                        {
+                                            f = string.Format("{0}({1}){2}", nameOnly, count, extension);
+                                            count++;
+
+                                        }
+                                    }
+
+                                    Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
+                                    int origWidth = originalBMP.Width;
+                                    int origHeight = originalBMP.Height;
+                                    int newWidth = 600;
+                                    int newHeight = 400;
+                                    Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
+                                    Graphics oGraphics = Graphics.FromImage(newBMP);
+                                    oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
+                                    oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                    oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
+                                    newBMP.Save(Path.Combine(imgFolder, f));
+                                    originalBMP.Dispose();
+                                    newBMP.Dispose();
+                                    oGraphics.Dispose();
+
+                                    var categoryID = 0;
+
+                                    foreach (ListItem bm in CategoryDropDownList.Items)
+                                    {
+                                        if (bm.Selected)
+                                        {
+                                            categoryID = int.Parse(bm.Value);
+
+                                        }
+                                    }
+                                    var Title = TitleTextBox.Text;
+                                    Message = "Bilden har laddat upp " + f;
+                                    string data = FaceBookConnect.Fetch(Access_Token, "me");
+                                    FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
+                                    Service.InsertUserImages(f, faceBookUser.Id, categoryID, Title);
+                                    Response.RedirectToRoute("upload");
                                 }
+                                else
+                                    lblStatus.Text = "Bilden får inte vara större än 5MB.";
                             }
-                            fuUpload.SaveAs(Path.Combine(imgFolder, f));
+                            else
+                                lblStatus.Text = "Bilden måste vara av typen png, jpg, jpeg eller gif.";
 
-                            var categoryID = 0;
-
-                            foreach (ListItem bm in CategoryDropDownList.Items)
-                            {
-                                if (bm.Selected)
-                                {
-                                    categoryID = int.Parse(bm.Value);
-
-                                }
-                            }
-                            var Title = TitleTextBox.Text;
-                            Message = "<font color='Green'>Bilden har laddat upp " + f + "</font>";
-                            string data = FaceBookConnect.Fetch(Code, "me");
-                            FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
-                            Service.InsertUserImages(f, faceBookUser.Id, categoryID, Title);
-                            Response.RedirectToRoute("upload");
                         }
                         else
-                            lblStatus.Text = "Bilden får inte vara större än 5MB.";
+                            lblStatus.Text = "Namn på bilden får inte vara större än 95 tecken.";
                     }
+
                     else
-                        lblStatus.Text = "Bilden måste vara av typen png, jpg, jpeg eller gif.";
-                }
 
+                        lblStatus.Text = "Du måste välja en bild och skriva  för att kunna ladda upp!.";
+                }
                 else
-
-
-                    lblStatus.Text = "Du måste välja en bild och skriva  för att kunna ladda upp!.";
+                    lblStatus.Text = "Rubriken måste anges!";
             }
-            else
-                lblStatus.Text = "Rubriken måste anges!";
-       
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-
-            bool deletionOccurs = false;
-
-            foreach (ListViewItem ri in ImgListView.Items)
-            {
-                CheckBox cb = ri.FindControl("cbDelete") as CheckBox;
-
-                if (cb.Checked)
-                {
-                    string fromPhotoToExtension = cb.Attributes["special"];
-                    string  NewF = fromPhotoToExtension.Replace("Images//", "");
-                    string fromRootToHome = Path.Combine(
-                AppDomain.CurrentDomain.GetData("APPBASE").ToString()
-
-                );
-                    string fileToDelete = Path.Combine(fromRootToHome, fromPhotoToExtension);
-                    File.Delete(fileToDelete);
-                    Service.DeleteUserImages(NewF);
-                    Message= "bilden/bilderna togs bort.";
-                    deletionOccurs = true;
-                }
-            }
-
-            if (deletionOccurs)
-                Response.RedirectToRoute("upload");
-            else
-                lblStatus.Text = "välja bilden som du vill ta bort sen tryck på knappen Ta bort!.";
-
-
         }
 
         // The return type can be changed to IEnumerable, however to support
@@ -188,9 +175,33 @@ namespace Share4UProjekt
         //     string sortByExpression
         public IEnumerable<Share4UProjekt.Model.Images> ImgListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
         {
-             string data = FaceBookConnect.Fetch(Code, "me");
+            string data = FaceBookConnect.Fetch(Access_Token, "me");
             FacebookOne facebookUser = new JavaScriptSerializer().Deserialize<FacebookOne>(data);
-            return Service.GetUsrPageWiseByID(maximumRows, startRowIndex, out totalRowCount,facebookUser.Id);
+            return Service.GetUsrPageWiseByID(maximumRows, startRowIndex, out totalRowCount, facebookUser.Id);
+        }
+
+
+        // The id parameter name should match the DataKeyNames value set on the control
+        public void ImgListView_DeleteItem(Images image)
+        {
+            try
+            {
+                var fromRootToPhoto = Path.Combine(
+                AppDomain.CurrentDomain.GetData("APPBASE").ToString(),
+                "Images"
+                );
+
+                var imagedata = Service.GetImgsDataByID(image.ImgID);
+                string fileToDelete = Path.Combine(fromRootToPhoto, imagedata.ImgName);
+                File.Delete(fileToDelete);
+                Service.DeleteUserImages(imagedata.ImgName);
+                Message = "bilden/bilderna togs bort.";
+                Response.RedirectToRoute("upload");
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError(String.Empty, "Ett oväntat fel inträffade då artikeln skulle tas bort.");
+            }
         }
     }
 }

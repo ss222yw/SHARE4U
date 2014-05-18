@@ -59,11 +59,9 @@ namespace Share4UProjekt.Pages.Share4UPages
             }
             try
             {
-
-
                 if (TryUpdateModel(img))
                 {
-                    Service.UpdateImg(img,kategoriID);
+                    Service.UpdateImg(img, kategoriID);
                     Page.SetTempData("Message", "Bilden har uppdaterats.");
                     Response.RedirectToRoute("upload");
                     Context.ApplicationInstance.CompleteRequest();

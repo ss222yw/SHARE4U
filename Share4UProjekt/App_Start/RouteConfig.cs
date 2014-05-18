@@ -22,6 +22,8 @@ namespace Share4UProjekt
 
             routes.MapPageRoute("About", "OmOss", "~/Pages/Share4UPages/About.aspx");
 
+            routes.MapPageRoute("SökResultat", "SökResultat", "~/Pages/Share4UPages/ShearchResult.aspx");
+            
             routes.MapPageRoute("AllCars", "BilarAlla", "~/Pages/Share4UPages/AllCars.aspx");
 
             routes.MapPageRoute("Contact", "kontaktaOss", "~/Pages/Share4UPages/Contact.aspx");
@@ -98,11 +100,15 @@ namespace Share4UProjekt
 
             routes.MapPageRoute("VOLVO", "VOLVO", "~/Pages/Cars/VOLVO.aspx");
 
+            routes.MapPageRoute("Ovriga", "OvrigaBilar", "~/Pages/Cars/Övriga.aspx");
+
             routes.MapPageRoute("Klassika", "Klassiska", "~/Pages/Cars/Klassika.aspx");
 
             routes.MapPageRoute("Edit", "LaddaUppRedigera{id}", "~/Pages/Share4UPages/Edit.aspx");
 
             routes.MapPageRoute("test", "Redigera{id}", "~/Pages/Admin/EditA.aspx");
+
+            routes.MapPageRoute("ShowImage", "ImagesKommentarer{id}", "~/Pages/Share4UPages/showImg.aspx");
         }
     }
 }

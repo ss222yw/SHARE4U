@@ -141,11 +141,11 @@
     <Content Include="css\reset.css" />
     <Content Include="css\skitter.styles.css" />
     <Content Include="css\skitter.styles.min.css" />
-    <Content Include="css\styles.css" />
     <Content Include="Images2\ajax-loader.gif" />
     <Content Include="Images2\audi.jpg" />
     <Content Include="Images2\bilar.jpg" />
     <Content Include="Images2\bilar2.png" />
+    <Content Include="Images2\Bild-Saknas.jpg" />
     <Content Include="Images2\car-brands.jpg" />
     <Content Include="Images2\example\001.jpg" />
     <Content Include="Images2\example\002.jpg" />
@@ -155,7 +155,18 @@
     <Content Include="Images2\example\11.jpg" />
     <Content Include="Images2\example\14.jpg" />
     <Content Include="Images2\example\16.jpg" />
+    <Content Include="Images2\example\Alfa.jpg" />
+    <Content Include="Images2\example\Audi.jpg" />
+    <Content Include="Images2\example\Cad.jpg" />
+    <Content Include="Images2\example\Cho.jpeg" />
+    <Content Include="Images2\example\Dodge.jpg" />
     <Content Include="Images2\example\facebook.png" />
+    <Content Include="Images2\example\FiIrak.jpg" />
+    <Content Include="Images2\example\Ford.jpg" />
+    <Content Include="Images2\example\Honda.jpg" />
+    <Content Include="Images2\example\Hundayi.jpg" />
+    <Content Include="Images2\example\Jaguar.jpeg" />
+    <Content Include="Images2\example\Jeep.jpg" />
     <Content Include="Images2\file-upload.jpg" />
     <Content Include="Images2\karta.png" />
     <Content Include="Images2\klassiskaVolvo.JPG" />
@@ -164,6 +175,7 @@
     <Content Include="Images2\pagericon.png" />
     <Content Include="Images2\prev.png" />
     <Content Include="Images2\sahibsahib2.JPG" />
+    <Content Include="Images2\searchicon.png" />
     <Content Include="Images2\Share4U.png" />
     <Content Include="Images2\share4uBrands.jpg" />
     <Content Include="Images2\speed_car_black_hd.jpg" />
@@ -184,11 +196,12 @@
     <Content Include="js\jquery.preloadimages.js" />
     <Content Include="js\jquery.skitter.js" />
     <Content Include="js\jquery.skitter.min.js" />
+    <Content Include="Pages\Cars\Övriga.aspx" />
     <Content Include="Pages\Share4UPages\About.aspx" />
     <Content Include="Pages\Cars\Alfa Romeo.aspx" />
     <Content Include="Pages\Cars\Audi.aspx" />
     <Content Include="Pages\Cars\BMW.aspx" />
-    <Content Include="Content\color.css" />
+    <Content Include="Content\cOLOR.css" />
     <Content Include="Pages\Cars\Cadillac.aspx" />
     <Content Include="Pages\Cars\Chevrolet.aspx" />
     <Content Include="Pages\Cars\Chrysler.aspx" />
@@ -292,6 +305,9 @@
     <Content Include="Pages\Cars\Volkswagen.aspx" />
     <Content Include="Pages\Cars\VOLVO.aspx" />
     <Content Include="Pages\Share4UPages\Edit.aspx" />
+    <Content Include="Pages\Share4UPages\Error.aspx" />
+    <Content Include="Pages\Share4UPages\ShearchResult.aspx" />
+    <Content Include="Pages\Share4UPages\showImg.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -321,7 +337,6 @@
     <Content Include="Bundle.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="xml\slides.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\_references.js" />
@@ -335,6 +350,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Infrastructure\PageExtensions.cs" />
+    <Compile Include="Pages\Cars\Övriga.aspx.cs">
+      <DependentUpon>Övriga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cars\Övriga.aspx.designer.cs">
+      <DependentUpon>Övriga.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Share4UPages\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -656,6 +678,27 @@
     </Compile>
     <Compile Include="Pages\Share4UPages\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\ShearchResult.aspx.cs">
+      <DependentUpon>ShearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\ShearchResult.aspx.designer.cs">
+      <DependentUpon>ShearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\showImg.aspx.cs">
+      <DependentUpon>showImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\showImg.aspx.designer.cs">
+      <DependentUpon>showImg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

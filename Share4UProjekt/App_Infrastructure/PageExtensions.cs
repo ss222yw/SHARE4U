@@ -6,6 +6,9 @@ using System.Web.UI;
 
 namespace Share4UProjekt
 {
+    /// <summary>
+    /// PageExtension statik klass som innehåller session för message.
+    /// </summary>
     public static class PageExtensions
     {
         public static object GetTempData(this Page page, string key)

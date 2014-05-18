@@ -66,8 +66,6 @@ div#MainContent_ValidationSummary1 {
     color: hsl(0, 100%, 100%);
 }
 
-/* main layout
-    ----------------------------------------------------------*/
 .main-content,
 .featured + .main-content {
     background-position: 10px 0;
@@ -146,8 +144,6 @@ login page #loginForm {
     width: auto;
 }
 
-/* footer
-    ----------------------------------------------------------*/
 footer .float-left,
 footer .float-right {
     float: none;
@@ -163,9 +159,7 @@ footer {
         margin: 0;
     }
 
-/* END: Mobile Styles */
 div#AboutUs {
-    /* margin: auto; */
     margin-left: 35%;
 }
 
@@ -201,7 +195,6 @@ img#twit {
     margin-top: -8px;
 }
 
-
 input[type=text], textarea {
     border: 1px solid #ccc;
 }
@@ -210,10 +203,6 @@ input[type=text], textarea {
         background-color: hsla(0, 6%, 71%, 0.89);
         border: 1px solid #ccc;
     }
-
-
-
-
 
 .modalBackground {
     background-color: Black;
@@ -245,8 +234,6 @@ input[type=text], textarea {
     font-weight: bold;
 }
 
-
-
 .CommentsPopup {
     width: 267px;
     border: 2px solid hsla(191, 10%, 31%, 0.18);
@@ -266,9 +253,6 @@ input[type=text], textarea {
     text-decoration: none;
     color: red;
 }
-
-
-
 
 input#MainContent_btnDelete {
     float: right;
@@ -407,7 +391,7 @@ label#MainContent_HeaderLabel {
 .btnLogin {
     height: 30px;
     border: solid;
-    margin-top: 4PX;
+    margin-top: -22PX;
     margin-left: 320px;
     Width: 140px;
 }
@@ -463,14 +447,14 @@ div#sideCars {
 
 span#MainContent_lblStatus {
     -moz-box-shadow: 0px 10px 14px -7px #3e7327;
-    -webkit-box-shadow: 0px 10px 14px -7px hsl(341, 68%, 51%);
-    box-shadow: 0px 10px 14px -7px hsl(341, 65%, 41%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, hsl(343, 100%, 50%)), color-stop(1, hsl(336, 88%, 32%)));
+    -webkit-box-shadow: 0px 10px 14px -7px hsl(0, 0%, 3%);
+    box-shadow: 0px 10px 14px -7px hsl(0, 0%, 0%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, hsl(0, 0%, 0%)), color-stop(1, hsl(336, 79%, 28%)));
     background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
-    background: -webkit-linear-gradient(top, hsl(348, 79%, 50%) 5%, hsl(346, 76%, 46%) 100%);
+    background: -webkit-linear-gradient(top, hsl(348, 40%, 33%) 5%, hsl(346, 56%, 37%) 100%);
     background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
     background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
-    background: linear-gradient(to bottom, hsl(355, 88%, 66%) 5%, hsl(348, 54%, 74%) 100%);
+    background: linear-gradient(to bottom, hsl(0, 0%, 97%) 5%, hsl(0, 0%, 85%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
     background-color: hsl(0, 100%, 50%);
     -moz-border-radius: 4px;
@@ -480,8 +464,6 @@ span#MainContent_lblStatus {
     display: inline-block;
     color: hsl(0, 100%, 27%);
 }
-
-
 
 .menu2 {
     color: #ffffff;
@@ -500,7 +482,7 @@ span#MainContent_lblStatus {
     z-index: 10000;
     margin-top: 4px;
 }
-    /* remove all the bullets, borders and padding from the default list styling */
+
     .menu2 ul li ul {
         background-color: hsl(0, 32%, 52%);
         color: blue;
@@ -513,7 +495,6 @@ span#MainContent_lblStatus {
         border-top: 1px solid #fff;
     }
 
-    /* style the table so that it takes no ppart in the layout - required for IE to work */
     .menu2 table {
         width: auto;
         height: 55px;
@@ -522,7 +503,6 @@ span#MainContent_lblStatus {
         left: 0;
     }
 
-    /* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
     .menu2 ul li {
         position: relative;
         margin: 0 1px 0 0;
@@ -545,13 +525,11 @@ span#MainContent_lblStatus {
         border-bottom: 1px solid #fff;
     }
 
-    /* another hack for IE */
     * html .menu2 ul ul {
         top: 35px;
     }
 
 
-    /* style the second level links */
     .menu2 ul li ul li a,
     .menu2 ul li ul li a:visited {
         background-color: silver;
@@ -564,7 +542,6 @@ span#MainContent_lblStatus {
     }
 
 
-        /* style the top level hover */
         .menu2 a:hover,
         .menu2 ul li ul li a:hover {
             color: white;
@@ -579,12 +556,11 @@ span#MainContent_lblStatus {
         text-decoration: none;
     }
 
-    /* make the second level visible when hover on first level list OR link */
     .menu2 ul li:hover ul,
     .menu2 ul a:hover ul {
         visibility: visible;
     }
-    /* keep the third level hidden when you hover on first level list OR link */
+
     .menu2 ul :hover ul ul {
         visibility: hidden;
     }
@@ -728,7 +704,6 @@ select#MainContent_CategoryDropDownList {
 }
 
 
-
 #Message {
     color: hsl(0, 44%, 96%);
     background-color: black;
@@ -774,4 +749,138 @@ input.aspNetDisabled {
     -webkit-box-shadow: 1px 1px 3px rgba(000,000,000,0.5), inset -1px 0px 1px rgba(0,0,0,1);
     box-shadow: 1px 1px 3px rgba(000,000,000,0.5), inset -1px 0px 1px rgba(0,0,0,1);
     text-shadow: 0px -1px 1px rgba(201,163,201,0.7), 1px 1px 0px rgba(184,140,184,0.5);
+}
+
+
+.suggest_link {
+    background-color: #FFFFFF;
+    padding: 2px 6px 2px 6px;
+}
+
+.suggest_link_over {
+    background-color: #3366CC;
+    padding: 2px 6px 2px 6px;
+}
+
+#search_suggest {
+    position: absolute;
+    background-color: #FFFFFF;
+    text-align: left;
+    border: 1px solid #000000;
+    margin-top: 211px;
+    margin-left: 1137px;
+}
+
+
+
+input#Button1 {
+    -moz-box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+    box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52));
+    background: -moz-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+    background: -webkit-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+    background: -o-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+    background: -ms-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+    background: linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52',GradientType=0);
+    background-color: #b8e356;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #83c41a;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #86ae47;
+    position: absolute;
+    margin-left: 96%;
+    margin-top: 0.7%;
+}
+
+input#Button1:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356));
+        background: -moz-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+        background: -webkit-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+        background: -o-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+        background: -ms-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+        background: linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356',GradientType=0);
+        background-color: #a5cc52;
+}
+
+input#Button1:active {
+        position: relative;
+        top: 1px;
+}
+
+
+.imgUserPhoto2 {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    float: left;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 60px;
+}
+
+.imgPhotoTitle {
+    margin-bottom: -40px;
+    color: hsl(0, 0%, 0%);
+    margin-left: 25px;
+    font-weight: bolder;
+}
+
+img#searchicon {
+    width: 20px;
+    height: 21px;
+    margin-top: 1.1%;
+    margin-left: 94%;
+}
+
+input#TextBox1 {
+    float: right;
+    margin-top: -2%;
+    margin-right: 5%;
+    width: 229px;
+    height: 22px;
+}
+
+.SearchResult {
+    -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+    -webkit-box-shadow: 0px 10px 14px -7px hsl(0, 0%, 3%);
+    box-shadow: 0px 10px 14px -7px hsl(0, 0%, 0%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, hsl(0, 0%, 0%)), color-stop(1, hsl(336, 79%, 28%)));
+    background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background: -webkit-linear-gradient(top, hsl(348, 40%, 33%) 5%, hsl(346, 56%, 37%) 100%);
+    background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background: linear-gradient(to bottom, hsl(0, 0%, 97%) 5%, hsl(0, 0%, 85%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+    background-color: hsl(0, 100%, 50%);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid hsl(334, 76%, 49%);
+    display: inline-block;
+    color: hsl(0, 100%, 27%);
+}
+
+
+div.youtube {
+    margin: auto;
+    margin-left: 8.4%;
+}
+
+
+.cssShowCars {
+width:600px;
+height:400px;
+margin:auto;
 }

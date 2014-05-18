@@ -7,19 +7,20 @@ using System.Web.Configuration;
 
 namespace Share4UProjekt.Model.DAL
 {
+    /// <summary>
+    /// Abstraktat klass som gör kontakt med sql server.
+    /// </summary>
     public abstract class DALBase
     {
         private static string _connectionString;
 
         protected static SqlConnection CreateConnection()
         {
-            // Returnerar referens till anslutnings-objekt
             return new SqlConnection(_connectionString);
         }
 
         static DALBase()
         {
-            // Hämtar anslutningssträngen från web.config
             _connectionString = WebConfigurationManager.ConnectionStrings["Share4UConnectionString"].ConnectionString;
         }
     }
