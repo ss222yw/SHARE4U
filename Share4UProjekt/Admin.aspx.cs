@@ -160,7 +160,7 @@ namespace Share4UProjekt
                                     }
                                 }
                                 var Title = TitleTextBox.Text;
-                                lblStatus.Text = "<font color='Green'>Bilden har laddat upp " + f + "</font>";
+                                lblStatus.Text = "Bilden har laddat upp " + f + "</font>";
                                 string data = FaceBookConnect.Fetch(Access_Token, "me");
                                 FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
                                 Service.InsertUserImages(f, faceBookUser.Id, categoryID, Title);
@@ -210,7 +210,7 @@ namespace Share4UProjekt
                 string fileToDelete = Path.Combine(fromRootToPhoto, imagedata.ImgName);
                 File.Delete(fileToDelete);
                 Service.DeleteUserImages(imagedata.ImgName);
-                Message = "bilden/bilderna togs bort.";
+                Message = "bilden togs bort.";
                 Response.RedirectToRoute("Admin");
             }
             catch (Exception)

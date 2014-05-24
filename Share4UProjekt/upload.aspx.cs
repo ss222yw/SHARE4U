@@ -70,7 +70,7 @@ namespace Share4UProjekt
             }
             else
             {
-                lblStatus.Text = "Du måste vara inloggad för att kunna se mina sidor!";
+                //lblStatus.Text = "Du måste vara inloggad för att kunna se mina sidor!";
                 fuUpload.Visible = false;
                 btnUpload.Visible = false;
                 CategoryDropDownList.Visible = false;
@@ -114,6 +114,8 @@ namespace Share4UProjekt
 
                                         }
                                     }
+                                   
+
 
                                     Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
                                     int origWidth = originalBMP.Width;
@@ -195,13 +197,14 @@ namespace Share4UProjekt
                 string fileToDelete = Path.Combine(fromRootToPhoto, imagedata.ImgName);
                 File.Delete(fileToDelete);
                 Service.DeleteUserImages(imagedata.ImgName);
-                Message = "bilden/bilderna togs bort.";
+                Message = "bilden togs bort.";
                 Response.RedirectToRoute("upload");
             }
             catch (Exception)
             {
-                ModelState.AddModelError(String.Empty, "Ett oväntat fel inträffade då artikeln skulle tas bort.");
+                ModelState.AddModelError(String.Empty, "Ett oväntat fel inträffade då bilden skulle tas bort.");
             }
         }
+
     }
 }

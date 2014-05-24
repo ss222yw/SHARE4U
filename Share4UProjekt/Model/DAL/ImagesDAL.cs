@@ -120,7 +120,7 @@ namespace Share4UProjekt.Model.DAL
                 {
                     SqlCommand cmd = new SqlCommand("appSchema.DeleteUserImages", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@ImgName", SqlDbType.NVarChar, 128).Value = imgName;
+                    cmd.Parameters.Add("@ImgName", SqlDbType.NVarChar, 100).Value = imgName;
                     conn.Open();
                     cmd.ExecuteNonQuery();
                 }

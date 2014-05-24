@@ -137,16 +137,55 @@
   <ItemGroup>
     <Content Include="carFavicon.png" />
     <Content Include="css\facets3.css" />
-    <Content Include="css\menu.css" />
+    <Content Include="css\menu2.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\skitter.styles.css" />
     <Content Include="css\skitter.styles.min.css" />
     <Content Include="Images2\ajax-loader.gif" />
+    <Content Include="Images2\ajaxtest.gif" />
     <Content Include="Images2\audi.jpg" />
     <Content Include="Images2\bilar.jpg" />
     <Content Include="Images2\bilar2.png" />
     <Content Include="Images2\Bild-Saknas.jpg" />
+    <Content Include="Images2\BrandsImgs\Alfa Romeo.png" />
+    <Content Include="Images2\BrandsImgs\audi_reflex2.png" />
+    <Content Include="Images2\BrandsImgs\benz.png" />
+    <Content Include="Images2\BrandsImgs\bmw.png" />
+    <Content Include="Images2\BrandsImgs\Cadillac.png" />
+    <Content Include="Images2\BrandsImgs\chofer.png" />
+    <Content Include="Images2\BrandsImgs\Chrysler.png" />
+    <Content Include="Images2\BrandsImgs\citroen.png" />
+    <Content Include="Images2\BrandsImgs\Classic.png" />
+    <Content Include="Images2\BrandsImgs\dodge.png" />
+    <Content Include="Images2\BrandsImgs\Ferrari.png" />
+    <Content Include="Images2\BrandsImgs\Fiat.png" />
+    <Content Include="Images2\BrandsImgs\ford.png" />
+    <Content Include="Images2\BrandsImgs\Honda.png" />
+    <Content Include="Images2\BrandsImgs\Hyundai.png" />
+    <Content Include="Images2\BrandsImgs\Jaguar.png" />
+    <Content Include="Images2\BrandsImgs\jeep.png" />
+    <Content Include="Images2\BrandsImgs\kia.gif" />
+    <Content Include="Images2\BrandsImgs\Land Rover.png" />
+    <Content Include="Images2\BrandsImgs\lexus.png" />
+    <Content Include="Images2\BrandsImgs\mazda.png" />
+    <Content Include="Images2\BrandsImgs\Mini.png" />
+    <Content Include="Images2\BrandsImgs\Mitsubishi.gif" />
+    <Content Include="Images2\BrandsImgs\nissan.png" />
+    <Content Include="Images2\BrandsImgs\pego.png" />
+    <Content Include="Images2\BrandsImgs\Porsche.png" />
+    <Content Include="Images2\BrandsImgs\renault.png" />
+    <Content Include="Images2\BrandsImgs\saab.png" />
+    <Content Include="Images2\BrandsImgs\SEAT.png" />
+    <Content Include="Images2\BrandsImgs\skoda.png" />
+    <Content Include="Images2\BrandsImgs\Smart.png" />
+    <Content Include="Images2\BrandsImgs\subaru.png" />
+    <Content Include="Images2\BrandsImgs\suzuki.png" />
+    <Content Include="Images2\BrandsImgs\toyota.png" />
+    <Content Include="Images2\BrandsImgs\volkswagen.png" />
+    <Content Include="Images2\BrandsImgs\volvoref.png" />
+    <Content Include="Images2\BrandsImgs\Övriga.png" />
     <Content Include="Images2\car-brands.jpg" />
+    <Content Include="Images2\cr.jpg" />
     <Content Include="Images2\example\001.jpg" />
     <Content Include="Images2\example\002.jpg" />
     <Content Include="Images2\example\004.jpg" />
@@ -167,7 +206,15 @@
     <Content Include="Images2\example\Hundayi.jpg" />
     <Content Include="Images2\example\Jaguar.jpeg" />
     <Content Include="Images2\example\Jeep.jpg" />
+    <Content Include="Images2\facebook-icon.png" />
+    <Content Include="Images2\facebook-icon1.png" />
+    <Content Include="Images2\favorite_add.png" />
+    <Content Include="Images2\fb.png" />
     <Content Include="Images2\file-upload.jpg" />
+    <Content Include="Images2\header.png" />
+    <Content Include="Images2\header1.png" />
+    <Content Include="Images2\header2.png" />
+    <Content Include="Images2\header3.png" />
     <Content Include="Images2\karta.png" />
     <Content Include="Images2\klassiskaVolvo.JPG" />
     <Content Include="Images2\mail_icon.png" />
@@ -175,6 +222,8 @@
     <Content Include="Images2\pagericon.png" />
     <Content Include="Images2\prev.png" />
     <Content Include="Images2\sahibsahib2.JPG" />
+    <Content Include="Images2\save1.png" />
+    <Content Include="Images2\save2.png" />
     <Content Include="Images2\searchicon.png" />
     <Content Include="Images2\Share4U.png" />
     <Content Include="Images2\share4uBrands.jpg" />
@@ -201,7 +250,6 @@
     <Content Include="Pages\Cars\Alfa Romeo.aspx" />
     <Content Include="Pages\Cars\Audi.aspx" />
     <Content Include="Pages\Cars\BMW.aspx" />
-    <Content Include="Content\cOLOR.css" />
     <Content Include="Pages\Cars\Cadillac.aspx" />
     <Content Include="Pages\Cars\Chevrolet.aspx" />
     <Content Include="Pages\Cars\Chrysler.aspx" />
@@ -306,6 +354,7 @@
     <Content Include="Pages\Cars\VOLVO.aspx" />
     <Content Include="Pages\Share4UPages\Edit.aspx" />
     <Content Include="Pages\Share4UPages\Error.aspx" />
+    <Content Include="Pages\Share4UPages\FavoritePage.aspx" />
     <Content Include="Pages\Share4UPages\ShearchResult.aspx" />
     <Content Include="Pages\Share4UPages\showImg.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -329,6 +378,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Content\COLOR.css" />
     <Content Include="upload.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -350,6 +400,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Infrastructure\PageExtensions.cs" />
+    <Compile Include="Model\DAL\FavoriteDAL.cs" />
+    <Compile Include="Model\Favorite.cs" />
     <Compile Include="Pages\Cars\Övriga.aspx.cs">
       <DependentUpon>Övriga.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -685,6 +737,13 @@
     </Compile>
     <Compile Include="Pages\Share4UPages\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\FavoritePage.aspx.cs">
+      <DependentUpon>FavoritePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\FavoritePage.aspx.designer.cs">
+      <DependentUpon>FavoritePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Share4UPages\ShearchResult.aspx.cs">
       <DependentUpon>ShearchResult.aspx</DependentUpon>

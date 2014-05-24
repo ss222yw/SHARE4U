@@ -30,7 +30,7 @@ namespace Share4UProjekt.Pages.Share4UPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            BackButton1.Attributes.Add("onclick", "javascript:history.go(-1);return false");
         }
 
 

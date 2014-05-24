@@ -882,3 +882,178 @@ E:\sahib\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
 E:\sahib\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
 E:\sahib\Share4UProjekt\obj\Debug\Share4UProjekt.dll
 E:\sahib\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Share4UProjekt.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Share4UProjekt.pdb
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Antlr3.Runtime.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\EntityFramework.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\System.Web.Optimization.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\System.Web.Providers.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\WebGrease.dll
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Facebook.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\FB.pdb
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\EntityFramework.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\ss222yw.LNU\Desktop\sahib\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.pdb
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Antlr3.Runtime.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\EntityFramework.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\System.Web.Optimization.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\System.Web.Providers.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\WebGrease.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Facebook.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\FB.pdb
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\EntityFramework.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+C:\Users\Sahib\Desktop\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.pdb
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Antlr3.Runtime.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\EntityFramework.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\System.Web.Optimization.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\System.Web.Providers.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\WebGrease.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Facebook.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\FB.pdb
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\EntityFramework.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+C:\Users\ss222yw\Desktop\the new one\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+F:\the new 2\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+F:\the new 2\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.pdb
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Antlr3.Runtime.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\EntityFramework.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\System.Web.Optimization.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\System.Web.Providers.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\WebGrease.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Facebook.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\FB.pdb
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\EntityFramework.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\the new 2\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.csprojResolveAssemblyReference.cache
+E:\the new 2\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.dll
+E:\the new 2\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.pdb
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Share4UProjekt.pdb
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Antlr3.Runtime.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\EntityFramework.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.MSAjax.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.ScriptManager.WebForms.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.Web.Infrastructure.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\System.Web.Optimization.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\System.Web.Providers.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\WebGrease.dll
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Facebook.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\FB.pdb
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\EntityFramework.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.Core.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\DotNetOpenAuth.AspNet.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\bin\Microsoft.AspNet.FriendlyUrls.xml
+F:\the new 2\AnvändDenna\Share4UProjekt\obj\Debug\Share4UProjekt.pdb

@@ -4,13 +4,16 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Peugeot</h2>
+        <%--Validtion summery för uppladdning.--%>
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
   <asp:ListView ID="ImagesListView" runat="server"
         ItemType="Share4UProjekt.Model.Images"
         SelectMethod="ImagesListView_GetData"
         DataKeyNames="ImgID">
               <ItemTemplate>
-            <span class="saucer" style="float: left; padding: 15px;">
+            <span class="spanImgs">
                 <asp:ImageButton CssClass="imgUserPhoto" OnCommand="imgUser_Command" CommandArgument='<%# "../../Images/" + Item.ImgName%>' ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br />
+                 <asp:ImageButton ID="ImageFavoriteButton" runat="server" CommandName='<%# Item.ImgName%>' OnCommand="ImageFavoriteButton_Command" ImageUrl='../../Images2/favorite_add.png' CssClass="favoriteButton"/>
                 </div>
                 <div class="editor-field">
                     Bilmärke :   <%#: Item.Title %>
@@ -31,23 +34,25 @@
                 <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
             </table>
              <%-- Pages visar 20 kontkater i en sida.--%>  
-           <asp:DataPager ID="DataPager" runat="server" PageSize="14">
+                <div id ="Clear">
+            <asp:DataPager ID="DataPager" runat="server" PageSize="16">
                 <Fields>
-                    <asp:NextPreviousPagerField ShowFirstPageButton="True" 
-                        FirstPageText=" Första " 
-                        ShowNextPageButton="false" 
+                    <asp:NextPreviousPagerField ShowFirstPageButton="True"
+                        FirstPageText=" Första "
+                        ShowNextPageButton="false"
                         ShowPreviousPageButton="true"
-                         PreviousPageText="Förra"
-                         ButtonType="Button" />
+                        PreviousPageText="Förra"
+                        ButtonType="Button" />
                     <asp:NumericPagerField ButtonType="Link" />
-                    <asp:NextPreviousPagerField ShowLastPageButton="True" 
-                        LastPageText=" Sista " 
-                        ShowNextPageButton="true" 
+                    <asp:NextPreviousPagerField ShowLastPageButton="True"
+                        LastPageText=" Sista "
+                        ShowNextPageButton="true"
                         ShowPreviousPageButton="false"
-                         NextPageText="Nästa"
+                        NextPageText="Nästa"
                         ButtonType="Button" />
                 </Fields>
             </asp:DataPager>
+                </div>
         </LayoutTemplate>
         <EmptyDataTemplate>
             <table>

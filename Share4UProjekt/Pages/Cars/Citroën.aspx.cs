@@ -1,4 +1,6 @@
-﻿using Share4UProjekt.Model;
+﻿using ASPSnippets.FaceBookAPI;
+using FB;
+using Share4UProjekt.Model;
 using Share4UProjekt.Model.DAL;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -51,21 +54,47 @@ namespace Share4UProjekt.Pages.Cars
             return Service.GetImagesPageWiseByID(maximumRows, startRowIndex, out totalRowCount, 9);
         }
 
-        protected void LinkButton1_Command(object sender, CommandEventArgs e)
+        private string Message
         {
-            ListViewDataItem item = (ListViewDataItem)(sender as Control).NamingContainer;
-            Label lblStatus = (Label)item.FindControl("Label1");
-            lblStatus.Visible = true;
-            ListViewDataItem item2 = (ListViewDataItem)(sender as Control).NamingContainer;
-            Label lblStatus2 = (Label)item2.FindControl("Label2");
-            lblStatus2.Visible = true;
+            get
+            {
+                return Session["Message"] as string;
+            }
+            set
+            {
+                Session["Message"] = value;
+            }
         }
 
-        protected void LinkButton2_Command(object sender, CommandEventArgs e)
+        public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
+
+        protected void ImageFavoriteButton_Command(object sender, CommandEventArgs e)
         {
-            ListViewDataItem item2 = (ListViewDataItem)(sender as Control).NamingContainer;
-            Label lblStatus2 = (Label)item2.FindControl("Label2");
-            lblStatus2.Visible = false;
+            if (Access_Token != null)
+            {
+                string data = FaceBookConnect.Fetch(Access_Token, "me");
+                FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
+                string imgName = e.CommandName;
+                string usrID = faceBookUser.Id;
+                FavoriteDAL f = new FavoriteDAL();
+                var lista = f.GetImgsFavoriteByName(faceBookUser.Id);
+                foreach (var item in lista)
+                {
+                    if (item.ImgName == imgName)
+                    {
+                        ModelState.AddModelError(String.Empty, "Denna bild finns redan i din favorit lista!");
+                        return;
+                    }
+                }
+                Service.InsertUserFavoriteImg(imgName, usrID);
+                Message = "bilden" + (imgName) + "Laggt till din favorit lista.";
+                Response.RedirectToRoute("Citroën");
+            }
+            else
+            {
+                Message = "Logga in för att lägga bilden till din favorit list!";
+                Response.RedirectToRoute("Citroën");
+            }
         }
     }
 }

@@ -4,8 +4,13 @@
     <script src="http://slideshow.triptracker.net/slide.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Bilar</h2>
+    <br />
 
+   
+    <br />
+<h1>Alla Bilar</h1>
+    <%--Validtion summery för uppladdning.--%>
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
     <asp:ListView ID="ImagesListView" runat="server"
         ItemType="Share4UProjekt.Model.Images"
         SelectMethod="ImagesListView_GetData"
@@ -15,7 +20,8 @@
             <table>
                 <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
             </table>
-            <asp:DataPager ID="DataPager" runat="server" PageSize="26">
+                 <div id ="Clear">
+            <asp:DataPager ID="DataPager" runat="server" PageSize="16">
                 <Fields>
                     <asp:NextPreviousPagerField ShowFirstPageButton="True"
                         FirstPageText=" Första "
@@ -32,11 +38,15 @@
                         ButtonType="Button" />
                 </Fields>
             </asp:DataPager>
+                </div>
         </LayoutTemplate>
         <ItemTemplate>
 
-            <span class="saucer" style="float: left; padding: 15px;">
+            <span class="spanImgs">
                 <asp:ImageButton CssClass="imgUserPhoto" OnCommand="imgUser_Command" CommandArgument='<%# "../../Images/" + Item.ImgName%>' ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br />
+                <br />
+                <asp:ImageButton ID="ImageFavoriteButton" runat="server" CommandName='<%# Item.ImgName%>' OnCommand="ImageFavoriteButton_Command" ImageUrl='../../Images2/favorite_add.png' CssClass="favoriteButton" />
+                <br />
                 </div>
                 <div class="editor-field">
                     Bilmärke :   <%#: Item.Title %>

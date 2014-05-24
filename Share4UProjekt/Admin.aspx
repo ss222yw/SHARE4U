@@ -6,35 +6,51 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>Admin Sida!</h2>
+         <%--Label för rätt meddalnde--%>
+    <asp:Label ID="SuccessLabel" Text="" runat="server" Visible="false" CssClass="success" />
+    <br />
     <%--Validtion summery för uppladdning.--%>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
     <asp:RegularExpressionValidator ID="fuUploadRegularExpressionValidator" runat="server" ErrorMessage="Filen måste vara av formaten jpg, jpeg, gif, png." ControlToValidate="fuUpload" Display="None" ValidationExpression=".*.(gif|jpg|jpeg|png|jpeg|GIF|JPG|PNG|JPEG)"></asp:RegularExpressionValidator>
     <asp:RequiredFieldValidator ID="fuUploadRequiredFieldValidator" runat="server" ErrorMessage="En bild måste väljas." Display="None" ControlToValidate="fuUpload"></asp:RequiredFieldValidator>
-    <h2>Admin Sida!</h2>
-    <br />
+    <div id="navigation2">
     <%--    uppladdning funktion--%>
     <asp:FileUpload ID="fuUpload" runat="server" />
-    <asp:Button ID="btnUpload" Text="Ladda upp" runat="server" OnClick="btnUpload_Click" CssClass="dark" /><br />
     <br />
-    <asp:Label ID="lblStatus" runat="server" />
+    <asp:Label ID="lblStatus" Text="" runat="server" />
     <br />
     <%-- label som innehåller namn på rubriken.--%>
     <label for="TitleTextBox" id="HeaderLabel" runat="server">Rubriken</label>
-    <asp:TextBox ID="TitleTextBox" runat="server" Text="" MaxLength="255" CssClass="Header" />
+    <br />
+    <%--    Textbox där skriver man rubrilken på en bild.--%>
+    <asp:TextBox ID="TitleTextBox" runat="server" Text="" MaxLength="25" CssClass="Header" />
     <%--    validation för textboxen--%>
     <asp:RequiredFieldValidator ID="HeaderRequiredFieldValidator" runat="server"
         ErrorMessage="Rubrik måste anges." ControlToValidate="TitleTextBox"
         Display="None">
     </asp:RequiredFieldValidator>
-    <%--Label för rätt meddalnde--%>
-    <asp:Label ID="SuccessLabel" Text="" runat="server" Visible="false" CssClass="success" />
-    <%--  dropdown list för kategorier--%>
+        <br />
+        <br />
+            <%--  dropdown list för kategorier--%>
     <asp:DropDownList ID="CategoryDropDownList" runat="server"
         SelectMethod="CategoryDropDownList_GetData"
         DataTextField="Kategori"
         DataValueField="KategoriID"
         Visible="false"
         CssClass="DropDownList" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Label ID="lblText" runat="server" Text=""></asp:Label>
+                <div id="divImage" style="display:none">
+                     <asp:Image ID="img1" runat="server" ImageUrl="~/Images2/ajaxtest.gif"  />
+                     Laddar...
+                </div>                
+                <br />
+           <asp:Button ID="btnUpload" Text="Ladda upp" runat="server" OnClick="btnUpload_Click" CssClass="Green1" /><br />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        </div>
     <%--    list view för bilderna.--%>
     <asp:ListView ID="ImgListView" runat="server"
         ItemType="Share4UProjekt.Model.Images"
@@ -46,7 +62,8 @@
             <table>
                 <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
             </table>
-            <asp:DataPager ID="DataPager" runat="server" PageSize="66">
+              <div id ="Clear">
+            <asp:DataPager ID="DataPager" runat="server" PageSize="16">
                 <Fields>
                     <asp:NextPreviousPagerField ShowFirstPageButton="True"
                         FirstPageText=" Första "
@@ -63,13 +80,14 @@
                         ButtonType="Button" />
                 </Fields>
             </asp:DataPager>
+                </div>
         </LayoutTemplate>
 
         <ItemTemplate>
-            <span>
+            <span class="spanImgs">
                 <asp:Image CommandArgument='<%# "../Images/" + Item.ImgName %>'
                     ImageUrl='<%# "~/Images/" + Item.ImgName %>' ID="imgUserPhoto"
-                    runat="server" alt="bilder." CssClass="ImgSize" />
+                    runat="server" alt="bilder." CssClass="ImgSizeAdmin" />
 
                 <br />
                 <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete" Text="Ta bort"

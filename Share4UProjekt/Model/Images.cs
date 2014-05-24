@@ -17,5 +17,6 @@ namespace Share4UProjekt.Model
         [StringLength(255, ErrorMessage = "Rubriken kan bestå av som mest 255 tecken.")]
         public string Title { get; set; }
         public DateTime dateOfTheDay { get; set; }
+       
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ASPSnippets.FaceBookAPI;
+using FB;
 using Share4UProjekt.Model;
 using Share4UProjekt.Model.DAL;
 using System;
@@ -7,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -61,6 +63,37 @@ namespace Share4UProjekt.Pages.Share4UPages
         public IEnumerable<Share4UProjekt.Model.Images> ImagesListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
         {
             return Service.GetImagesPageWise(maximumRows, startRowIndex, out totalRowCount);
+        }
+
+        public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
+
+        protected void ImageFavoriteButton_Command(object sender, CommandEventArgs e)
+        {
+            if (Access_Token != null)
+            {
+                string data = FaceBookConnect.Fetch(Access_Token, "me");
+                FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
+                string imgName = e.CommandName;
+                string usrID = faceBookUser.Id;
+                FavoriteDAL f = new FavoriteDAL();
+                var lista = f.GetImgsFavoriteByName(faceBookUser.Id);
+                foreach (var item in lista)
+                {
+                    if (item.ImgName == imgName)
+                    {
+                        ModelState.AddModelError(String.Empty, "Denna bild finns redan i din favorit lista!");
+                        return;
+                    }
+                }
+                Service.InsertUserFavoriteImg(imgName, usrID);
+                Message = "bilden" + (imgName) + "Laggt till din favorit lista.";
+                Response.RedirectToRoute("AllCars");
+            }
+            else
+            {
+                Message = "Logga in för att lägga bilden till din favorit list!";
+                Response.RedirectToRoute("AllCars");
+            }
         }
     }
 }

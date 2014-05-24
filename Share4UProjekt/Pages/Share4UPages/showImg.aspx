@@ -20,7 +20,7 @@
         </LayoutTemplate>
         <ItemTemplate>
 
-            <span class="saucer" style="float: left; padding: 15px;">
+            <span class="SpanImg">
                 <asp:Image CssClass="cssShowCars" ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br />
                 </div>
                 <div class="editor-field">
@@ -33,6 +33,7 @@
                 </div>
          
             </span>
+           
         </ItemTemplate>
         <EmptyDataTemplate>
             <table>
@@ -43,5 +44,5 @@
             </table>
         </EmptyDataTemplate>
     </asp:ListView>
-
+     <asp:Button ID="BackButton1" runat="server" Text="Tillbaka"  CssClass="Green"/>
 </asp:Content>

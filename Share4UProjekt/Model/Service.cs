@@ -28,7 +28,6 @@ namespace Share4UProjekt.Model
         }
 
 
-
         private CategoryDAL _CategoryDAL;
         private CategoryDAL CategoryDAL
         {
@@ -60,6 +59,8 @@ namespace Share4UProjekt.Model
             ImagesDAL.GetImagesDataByID(imgID);
         }
 
+      
+
         public void UpdateImg(Images img, int kategoriID)
         {
             ImagesDAL.UpdateImgs(img, kategoriID);
@@ -70,7 +71,7 @@ namespace Share4UProjekt.Model
             ImagesDAL.DeleteUserImages(imgName);
         }
 
-
+   
         private FacebookDAL _FacebookDAL;
         private FacebookDAL FacebookDAL
         {
@@ -88,5 +89,37 @@ namespace Share4UProjekt.Model
             return 
             FacebookDAL.getUsrData(usrID);
         }
+
+
+        private FavoriteDAL _FavoriteDAL;
+        private FavoriteDAL FavoriteDAL
+        {
+            get
+            { return _FavoriteDAL ?? (_FavoriteDAL = new FavoriteDAL()); }
+        }
+
+        public Favorite GetImgsFavoriteByID(int favoriteID)
+        {
+            return
+            FavoriteDAL.GetImgsFavoriteByID(favoriteID);
+        }
+
+        public void DeleteUserFavoriteImages(int fav)
+        {
+            FavoriteDAL.DeleteUserFavoriteImages(fav);
+        }
+
+        public void InsertUserFavoriteImg(string imgName, string usrID)
+        {
+            FavoriteDAL.InsertUserFavoriteImg(imgName, usrID);
+        }
+
+
+        public static IEnumerable<Favorite> GetUsrFavoriteImagesPageWiseByID(int maximumRows, int startRowIndex, out int totalRowCount, string userid)
+        {
+            return
+             FavoriteDAL.GetUsrFavoriteImagesPageWiseByID(maximumRows, startRowIndex, out totalRowCount, userid);
+        }
+
     }
 }
