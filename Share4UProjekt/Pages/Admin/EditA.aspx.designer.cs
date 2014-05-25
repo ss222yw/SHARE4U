@@ -31,6 +31,15 @@ namespace Share4UProjekt.Pages.Admin {
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary3;
         
         /// <summary>
+        /// Suc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suc;
+        
+        /// <summary>
         /// EditFormView control.
         /// </summary>
         /// <remarks>

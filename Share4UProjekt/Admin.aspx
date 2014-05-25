@@ -47,7 +47,7 @@
                      Laddar...
                 </div>                
                 <br />
-           <asp:Button ID="btnUpload" Text="Ladda upp" runat="server" OnClick="btnUpload_Click" CssClass="Green1" /><br />
+           <asp:Button ID="btnUpload" Text="Ladda upp" runat="server" OnClick="btnUpload_Click" CssClass="editButtons" /><br />
             </ContentTemplate>
         </asp:UpdatePanel>
         </div>
@@ -63,21 +63,23 @@
                 <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
             </table>
               <div id ="Clear">
-            <asp:DataPager ID="DataPager" runat="server" PageSize="16">
+                   <asp:DataPager ID="DataPager" runat="server" PageSize="16">
                 <Fields>
                     <asp:NextPreviousPagerField ShowFirstPageButton="True"
                         FirstPageText=" Första "
                         ShowNextPageButton="false"
                         ShowPreviousPageButton="true"
                         PreviousPageText="Förra"
-                        ButtonType="Button" />
+                        ButtonType="Button" 
+                        ButtonCssClass="pagingButtons"/>
                     <asp:NumericPagerField ButtonType="Link" />
                     <asp:NextPreviousPagerField ShowLastPageButton="True"
                         LastPageText=" Sista "
                         ShowNextPageButton="true"
                         ShowPreviousPageButton="false"
                         NextPageText="Nästa"
-                        ButtonType="Button" />
+                        ButtonType="Button" 
+                        ButtonCssClass="pagingButtons"/>
                 </Fields>
             </asp:DataPager>
                 </div>
@@ -93,6 +95,9 @@
                 <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete" Text="Ta bort"
                     OnClientClick='<%# String.Format("return confirm (\"Är du säker att du vill ta bort" + Item.ImgName + "?\")") %>'
                     CausesValidation="false" CssClass="Red" />
+                <asp:HyperLink ID="HyperLink1" runat="server" Text="Redigera" NavigateUrl='<%# GetRouteUrl("test", new { id = Item.ImgID }) %>'  CssClass="Red"/>
+                <br />
+                <br />
                 <asp:DropDownList ID="CategoryDropDownList2" runat="server"
                     SelectMethod="CategoryDropDownList_GetData"
                     DataTextField="Kategori"
@@ -101,6 +106,8 @@
                     Enabled="false"
                     CssClass="DropDownList"
                     SelectedValue='<%# Item.KategoriID %>' />
+                <br />
+                <br />
                 </div><div class="editor-label">
                     <label for="Header"><strong>Rubrik :</strong></label>
                 </div>
@@ -113,7 +120,6 @@
                 <div class="editor-field">
                     <%#: Item.dateOfTheDay.ToString("yyyy/MM/dd") %>
                 </div>
-                <asp:HyperLink ID="HyperLink1" runat="server" Text="Redigera" NavigateUrl='<%# GetRouteUrl("test", new { id = Item.ImgID }) %>' />
             </span>
         </ItemTemplate>
         <EmptyDataTemplate>

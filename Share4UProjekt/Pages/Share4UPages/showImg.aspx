@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <h2></h2>
-
+   <div id="showImgLayout">
     <asp:ListView ID="ImagesListView" runat="server"
         ItemType="Share4UProjekt.Model.Images"
         SelectMethod="ImagesListView_GetData"
@@ -19,8 +19,7 @@
 
         </LayoutTemplate>
         <ItemTemplate>
-
-            <span class="SpanImg">
+            <span>
                 <asp:Image CssClass="cssShowCars" ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br />
                 </div>
                 <div class="editor-field">
@@ -44,5 +43,6 @@
             </table>
         </EmptyDataTemplate>
     </asp:ListView>
-     <asp:Button ID="BackButton1" runat="server" Text="Tillbaka"  CssClass="Green"/>
+     <asp:Button ID="BackButton1" runat="server" Text="Tillbaka"  CssClass="savebuttons"/>
+       </div>
 </asp:Content>

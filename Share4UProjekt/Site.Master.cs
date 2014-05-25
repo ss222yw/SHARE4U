@@ -173,8 +173,7 @@ namespace Share4UProjekt
 
                 else
                 {
-                    Message = "Sökningen måste anges!";
-                    Response.Redirect("SökResultat");
+                    
                 }
             }
            

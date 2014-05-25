@@ -22,6 +22,15 @@ namespace Share4UProjekt {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
+        /// lblSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSearch;
+        
+        /// <summary>
         /// HyperLink46 control.
         /// </summary>
         /// <remarks>
@@ -85,15 +94,6 @@ namespace Share4UProjekt {
         protected global::System.Web.UI.WebControls.Panel pnlFbUser;
         
         /// <summary>
-        /// PImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image PImage;
-        
-        /// <summary>
         /// lblUsrName control.
         /// </summary>
         /// <remarks>
@@ -101,6 +101,15 @@ namespace Share4UProjekt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUsrName;
+        
+        /// <summary>
+        /// PImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image PImage;
         
         /// <summary>
         /// btnLogout control.

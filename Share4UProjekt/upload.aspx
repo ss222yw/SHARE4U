@@ -47,7 +47,7 @@
                      Laddar...
                 </div>                
                 <br />
-           <asp:Button ID="btnUpload" Text="Ladda upp" runat="server" OnClick="btnUpload_Click" CssClass="Green1" /><br />
+           <asp:Button ID="btnUpload" Text="Ladda upp" runat="server" OnClick="btnUpload_Click" CssClass="editButtons" /><br />
             </ContentTemplate>
         </asp:UpdatePanel>
         </div>
@@ -69,14 +69,16 @@
                         ShowNextPageButton="false"
                         ShowPreviousPageButton="true"
                         PreviousPageText="Förra"
-                        ButtonType="Button" />
+                        ButtonType="Button" 
+                        ButtonCssClass="pagingButtons"/>
                     <asp:NumericPagerField ButtonType="Link" />
                     <asp:NextPreviousPagerField ShowLastPageButton="True"
                         LastPageText=" Sista "
                         ShowNextPageButton="true"
                         ShowPreviousPageButton="false"
                         NextPageText="Nästa"
-                        ButtonType="Button" />
+                        ButtonType="Button" 
+                        ButtonCssClass="pagingButtons"/>
                 </Fields>
             </asp:DataPager>
                 </div>

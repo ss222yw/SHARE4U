@@ -43,14 +43,16 @@
                         ShowNextPageButton="false"
                         ShowPreviousPageButton="true"
                         PreviousPageText="Förra"
-                        ButtonType="Button" />
+                        ButtonType="Button" 
+                        ButtonCssClass="pagingButtons"/>
                     <asp:NumericPagerField ButtonType="Link" />
                     <asp:NextPreviousPagerField ShowLastPageButton="True"
                         LastPageText=" Sista "
                         ShowNextPageButton="true"
                         ShowPreviousPageButton="false"
                         NextPageText="Nästa"
-                        ButtonType="Button" />
+                        ButtonType="Button" 
+                        ButtonCssClass="pagingButtons"/>
                 </Fields>
             </asp:DataPager>
                 </div>

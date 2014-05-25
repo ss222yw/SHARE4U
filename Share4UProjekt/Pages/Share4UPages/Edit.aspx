@@ -4,6 +4,11 @@
     <div id="editLayout">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
     <asp:ValidationSummary ID="ValidationSummary2" runat="server" CssClass="validation-summary-errors" ValidationGroup="EditValidation" ShowModelStateErrors="false" />
+        <br />
+        <br />
+         
+               <%--Label för rätt meddalnde--%>
+    <asp:Label ID="Suc" Text="" runat="server"  CssClass="success2" Visible="false" />
     <asp:FormView ID="EditFormView" runat="server"
         ItemType="Share4UProjekt.Model.Images"
         DataKeyNames="ImgID"
@@ -13,7 +18,7 @@
         UpdateMethod="EditFormView_UpdateItem">
         <EditItemTemplate>
                 <asp:Image CssClass="imgUserPhoto"  ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br /><br />
-                    Bilmärke :   <%#: Item.Title %>
+                    Rubrik :   <%#: Item.Title %>
             <br />
                     Inlagd :  <%#: Item.dateOfTheDay.ToString("yyyy/MM/dd") %>
             <br />
@@ -34,8 +39,8 @@
             </div>
             <br />
             <div id="button-div">
-                <asp:LinkButton ID="LinkButton1" runat="server" Text="Spara" CommandName="Update" ValidationGroup="EditValidation"  CausesValidation="false" />
-                <asp:HyperLink ID="HyperLink1" runat="server" Text="Avbryt" NavigateUrl='<%# GetRouteUrl("upload", new { id = Item.ImgID }) %>'  />
+                <asp:LinkButton ID="LinkButton1" runat="server" Text="Spara" CommandName="Update" ValidationGroup="EditValidation"  CausesValidation="false"  CssClass="savebuttons"/>
+                <asp:HyperLink ID="HyperLink1" runat="server" Text="Avbryt" NavigateUrl='<%# GetRouteUrl("upload", new { id = Item.ImgID }) %>'   CssClass="savebuttons"/>
             </div>
         </EditItemTemplate>
     </asp:FormView>

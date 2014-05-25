@@ -31,8 +31,12 @@
     <div id="wrapper">
         <form runat="server">
             <div id="header">
+                <asp:Label ID="lblSearch" runat="server" Text=""></asp:Label>
                 <div id="header1">
                     <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>"></asp:HyperLink>
+                       <%-- Inloggning system via facebook--%>
+                    <div>
+                  </div>
                 </div>
                 <br />
                 <br />
@@ -45,31 +49,28 @@
 
 
                 <header>
-                    <%-- Inloggning system via facebook--%>
-                    <div>
-                        <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/facebook-icon1.png" OnClick="Login" CssClass="btnLogin" CausesValidation="false" />
-                        <asp:Label ID="Label2" runat="server">
+                 <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/facebook-icon1.png" OnClick="Login" CssClass="btnLogin" CausesValidation="false" />
+                   <asp:Label ID="Label2" runat="server">
                             <asp:Panel ID="pnlFbUser" runat="server" Visible="false">
                                 <table>
                                     <tr>
+                                        <td>Hej:
+                            <asp:Label ID="lblUsrName" runat="server" Text=""></asp:Label>
+                                        </td>
+                                    </tr>
+                                     <tr>
                                         <td>
                                             <asp:Image ID="PImage" runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Välkommen:
-                            <asp:Label ID="lblUsrName" runat="server" Text=""></asp:Label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
+                                        <td>
                                             <asp:ImageButton ID="btnLogout" runat="server" ImageUrl="Images2/fb.png" OnClick="Logout" CssClass="btnLogout" CausesValidation="false" />
                                         </td>
                                     </tr>
                                 </table>
                             </asp:Panel>
                         </asp:Label>
-                    </div>
                 </header>
             </div>
             <div id="navigation1">

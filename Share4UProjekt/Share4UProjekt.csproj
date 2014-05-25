@@ -136,11 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="carFavicon.png" />
-    <Content Include="css\facets3.css" />
-    <Content Include="css\menu2.css" />
-    <Content Include="css\reset.css" />
-    <Content Include="css\skitter.styles.css" />
-    <Content Include="css\skitter.styles.min.css" />
     <Content Include="Images2\ajax-loader.gif" />
     <Content Include="Images2\ajaxtest.gif" />
     <Content Include="Images2\audi.jpg" />
@@ -234,14 +229,10 @@
     <Content Include="Images2\sprite-round.png" />
     <Content Include="Images2\sprite-square.png" />
     <Content Include="Images2\upload.png" />
-    <Content Include="js\common.js" />
-    <Content Include="js\jquery-1.4.2.min.js" />
+    <Content Include="Images2\w_pagination_bg.gif" />
     <Content Include="js\jquery-1.6.3.min.js" />
     <Content Include="js\jquery.clip.js" />
     <Content Include="js\jquery.easing.1.3.js" />
-    <Content Include="js\jquery.facets.js" />
-    <Content Include="js\jquery.facets.min.js" />
-    <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.preloadimages.js" />
     <Content Include="js\jquery.skitter.js" />
     <Content Include="js\jquery.skitter.min.js" />
@@ -355,6 +346,7 @@
     <Content Include="Pages\Share4UPages\Edit.aspx" />
     <Content Include="Pages\Share4UPages\Error.aspx" />
     <Content Include="Pages\Share4UPages\FavoritePage.aspx" />
+    <Content Include="Pages\Share4UPages\MsgBoxForm.aspx" />
     <Content Include="Pages\Share4UPages\ShearchResult.aspx" />
     <Content Include="Pages\Share4UPages\showImg.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -744,6 +736,13 @@
     </Compile>
     <Compile Include="Pages\Share4UPages\FavoritePage.aspx.designer.cs">
       <DependentUpon>FavoritePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\MsgBoxForm.aspx.cs">
+      <DependentUpon>MsgBoxForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Share4UPages\MsgBoxForm.aspx.designer.cs">
+      <DependentUpon>MsgBoxForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Share4UPages\ShearchResult.aspx.cs">
       <DependentUpon>ShearchResult.aspx</DependentUpon>

@@ -160,7 +160,7 @@ namespace Share4UProjekt
                                     }
                                 }
                                 var Title = TitleTextBox.Text;
-                                lblStatus.Text = "Bilden har laddat upp " + f + "</font>";
+                                Message = "Bilden " + f + " har laddat upp ";
                                 string data = FaceBookConnect.Fetch(Access_Token, "me");
                                 FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
                                 Service.InsertUserImages(f, faceBookUser.Id, categoryID, Title);

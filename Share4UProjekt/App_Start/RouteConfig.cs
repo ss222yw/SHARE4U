@@ -28,6 +28,8 @@ namespace Share4UProjekt
 
             routes.MapPageRoute("Contact", "kontaktaOss", "~/Pages/Share4UPages/Contact.aspx");
 
+            routes.MapPageRoute("Msg", "Meddlande", "~/Pages/Share4UPages/MsgBoxForm.aspx");
+
             routes.MapPageRoute("Alfa Romeo", "AlfaRomeo", "~/Pages/Cars/Alfa Romeo.aspx");
 
             routes.MapPageRoute("Audi", "Audi", "~/Pages/Cars/Audi.aspx");

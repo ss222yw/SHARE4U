@@ -70,7 +70,7 @@ namespace Share4UProjekt
             }
             else
             {
-                //lblStatus.Text = "Du måste vara inloggad för att kunna se mina sidor!";
+                lblStatus.Text = "Du måste vara inloggad för att kunna se mina sidor!";
                 fuUpload.Visible = false;
                 btnUpload.Visible = false;
                 CategoryDropDownList.Visible = false;
