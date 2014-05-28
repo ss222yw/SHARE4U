@@ -5,9 +5,10 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
           <p>
-        Vi är beklagar att ett fel inträffade och vi inte kunde hantera din förfrågan.
+        
+              <asp:Image ID="Image1" runat="server"  ImageUrl="../Images2/404.jpg"/>
     </p>
     <p>
-        <asp:HyperLink ID="HyperLink1" runat="server" Text="Tillbaka till startsidan" NavigateUrl='<%$ RouteUrl:routename=Default %>' />
+        <asp:HyperLink ID="HyperLink1" runat="server" Text="Tillbaka till startsidan" NavigateUrl='<%$ RouteUrl:routename=Default %>' CssClass="Msg"/>
     </p>
 </asp:Content>

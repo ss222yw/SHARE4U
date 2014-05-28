@@ -7,9 +7,15 @@
         <br />
         <br />
          
-               <%--Label för rätt meddalnde--%>
-    <asp:Label ID="Suc" Text="" runat="server"  CssClass="success2" Visible="false" />
-    <asp:FormView ID="EditFormView" runat="server"
+              <%--Label för rätt meddalnde--%>
+    <asp:Panel ID="ResponsePanel" runat="server" Visible="false">
+    <asp:Label ID="SuccessTest" Text="" runat="server"  CssClass="success" />
+         <asp:ImageButton ID="closeImg" runat="server" ImageUrl="~/Images2/delete.gif" CausesValidation="false" OnClick="closeImg_Click" />
+        </asp:Panel>
+   <br />
+    <br />
+    <br />
+    <br />    <asp:FormView ID="EditFormView" runat="server"
         ItemType="Share4UProjekt.Model.Images"
         DataKeyNames="ImgID"
         DefaultMode="Edit"
@@ -18,14 +24,14 @@
         UpdateMethod="EditFormView_UpdateItem">
         <EditItemTemplate>
                 <asp:Image CssClass="imgUserPhoto"  ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br /><br />
-                    Rubrik :   <%#: Item.Title %>
+                    Modell :   <%#: Item.Title %>
             <br />
                     Inlagd :  <%#: Item.dateOfTheDay.ToString("yyyy/MM/dd") %>
             <br />
             <br />
               <div class="editor-field">
                 <asp:TextBox ID="Header" runat="server" Text='<%# BindItem.Title %>' MaxLength="25" />
-                <asp:RequiredFieldValidator ID="HeaderRequiredFieldValidator" runat="server" ErrorMessage="Rubriken på bilden måste anges." ControlToValidate="Header" Display="None" ValidationGroup="EditValidation"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="HeaderRequiredFieldValidator" runat="server" ErrorMessage="Modellen på bilden måste anges." ControlToValidate="Header" Display="None" ValidationGroup="EditValidation"></asp:RequiredFieldValidator>
             </div>
 
             <div>

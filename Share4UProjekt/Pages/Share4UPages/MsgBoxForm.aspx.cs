@@ -26,6 +26,7 @@ namespace Share4UProjekt.Pages.Share4UPages
         {
             if (IsValid)
             {
+                //Tagit delvis kod från aspsnippet.
                 using (MailMessage mm = new MailMessage(txtEmail.Text, txtTo.Text))
                 {
                     try

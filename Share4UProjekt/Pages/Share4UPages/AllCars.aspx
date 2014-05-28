@@ -4,11 +4,19 @@
     <script src="http://slideshow.triptracker.net/slide.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="MainContent" runat="server">
+
+<h1>Alla Bilar</h1>
+    <br />
+      <%--Label för rätt meddalnde--%>
+    <asp:Panel ID="ResponsePanel" runat="server" Visible="false">
+    <asp:Label ID="SuccessTest" Text="" runat="server"  CssClass="success" />
+         <asp:ImageButton ID="closeImg" runat="server" ImageUrl="~/Images2/delete.gif" CausesValidation="false" OnClick="closeImg_Click" />
+        </asp:Panel>
+    <br />
+    <br />
+    <br />
     <br />
 
-   
-    <br />
-<h1>Alla Bilar</h1>
     <%--Validtion summery för uppladdning.--%>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
     <asp:ListView ID="ImagesListView" runat="server"
@@ -51,7 +59,7 @@
                 <br />
                 </div>
                 <div class="editor-field">
-                    Bilmärke :   <%#: Item.Title %>
+                    Modell :   <%#: Item.Title %>
                 </div>
                 <div class="editor-field">
                     Inlagd :  <%#: Item.dateOfTheDay.ToString("yyyy/MM/dd") %>

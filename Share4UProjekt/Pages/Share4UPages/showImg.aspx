@@ -23,12 +23,13 @@
                 <asp:Image CssClass="cssShowCars" ImageUrl='<%# "../../Images/" + Item.ImgName %>' ID="imgUserPhoto2" runat="server" alt="bilder." /><br />
                 </div>
                 <div class="editor-field">
-                    Bilmärke :   <%#: Item.Title %>
+                    Modell :   <%#: Item.Title %>
                 </div>
                 <div class="editor-field">
                     Inlagd :  <%#: Item.dateOfTheDay.ToString("yyyy/MM/dd") %>
                 </div>
-                <div class="fb-comments" data-href="http://localhost:8317/comments/<%# Item.ImgName %>" data-numposts="5" data-colorscheme="light" data-width="600"></div>
+                <%-- Tagit från facebook developer och ändrat så den passar min egen kod--%>
+                <div class="fb-comments" data-href="http://localhost:8317/comments/<%# Item.ImgName %>" data-numposts="5" data-colorscheme="dark" data-width="600"></div>
                 </div>
          
             </span>

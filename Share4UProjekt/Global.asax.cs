@@ -17,7 +17,6 @@ namespace Share4UProjekt
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //Application["NoOfVisitors"] = 0;
         }
 
         void Application_End(object sender, EventArgs e)
@@ -32,11 +31,5 @@ namespace Share4UProjekt
 
         public string Admin { get { return admin; } }
 
-        //void Session_Start(object sender, EventArgs e)
-        //{
-        //    Application.Lock();
-        //    Application["NoOfVisitors"] = (int)Application["NoOfVisitors"] + 1;
-        //    Application.UnLock();
-        //}
     }
 }

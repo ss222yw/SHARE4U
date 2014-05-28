@@ -6,19 +6,8 @@
     <link href="css/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>
+    <%--    <script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>--%>
     <script type="text/javascript" src="js/jquery.skitter.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.box_skitter_large').skitter({
-                theme: 'round',
-                dots: true,
-                preview: true,
-                numbers_align: 'center'
-            });
-        });
-    </script>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
@@ -27,7 +16,10 @@
     <h1>Välkommen tiill ShareCarsPics4U</h1>
     <br />
     <br />
+    <h2> Dela bilder som du tycker är Intressanta om bilar, få riktiga svar från människor över hela sverige, och upptäck vilka som gör dig lycklig.</h2>
     <br />
+    <br />
+    <%--    Tagit från http://www.serie3.info/s3slider/ och implemnterat den så den passar med min sida.--%>
     <div id="page">
         <div id="content">
             <div class="border_box">
@@ -128,7 +120,17 @@
             </div>
         </div>
     </div>
-     <br />
     <br />
     <br />
+    <br />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.box_skitter_large').skitter({
+                theme: 'round',
+                dots: true,
+                preview: true,
+                numbers_align: 'center'
+            });
+        });
+    </script>
 </asp:Content>

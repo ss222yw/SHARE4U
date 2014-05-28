@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Meddalnd</h2>
+    <h2>Meddlande</h2>
           <br />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
     <table>

@@ -6,6 +6,16 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Favorit sida!</h2>
+      <br />
+      <%--Label för rätt meddalnde--%>
+    <asp:Panel ID="ResponsePanel" runat="server" Visible="false">
+    <asp:Label ID="SuccessTest" Text="" runat="server"  CssClass="success" />
+         <asp:ImageButton ID="closeImg" runat="server" ImageUrl="~/Images2/delete.gif" CausesValidation="false" OnClick="closeImg_Click" />
+        </asp:Panel>
+    <br />
+    <br />
+    <br />
+    <br />
     <asp:Label ID="LabelFavoriteMessage" runat="server" Text=""></asp:Label>
         <%--Validtion summery för uppladdning.--%>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />

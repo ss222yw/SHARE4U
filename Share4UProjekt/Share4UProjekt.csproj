@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="carFavicon.png" />
+    <Content Include="Images2\404.jpg" />
     <Content Include="Images2\ajax-loader.gif" />
     <Content Include="Images2\ajaxtest.gif" />
     <Content Include="Images2\audi.jpg" />
@@ -181,6 +182,7 @@
     <Content Include="Images2\BrandsImgs\Övriga.png" />
     <Content Include="Images2\car-brands.jpg" />
     <Content Include="Images2\cr.jpg" />
+    <Content Include="Images2\delete.gif" />
     <Content Include="Images2\example\001.jpg" />
     <Content Include="Images2\example\002.jpg" />
     <Content Include="Images2\example\004.jpg" />
@@ -206,6 +208,8 @@
     <Content Include="Images2\favorite_add.png" />
     <Content Include="Images2\fb.png" />
     <Content Include="Images2\file-upload.jpg" />
+    <Content Include="Images2\gif1.jpg" />
+    <Content Include="Images2\gif2.gif" />
     <Content Include="Images2\header.png" />
     <Content Include="Images2\header1.png" />
     <Content Include="Images2\header2.png" />
@@ -217,10 +221,7 @@
     <Content Include="Images2\pagericon.png" />
     <Content Include="Images2\prev.png" />
     <Content Include="Images2\sahibsahib2.JPG" />
-    <Content Include="Images2\save1.png" />
-    <Content Include="Images2\save2.png" />
-    <Content Include="Images2\searchicon.png" />
-    <Content Include="Images2\Share4U.png" />
+    <Content Include="Images2\save100.png" />
     <Content Include="Images2\share4uBrands.jpg" />
     <Content Include="Images2\speed_car_black_hd.jpg" />
     <Content Include="Images2\sprite-clean.png" />
@@ -314,7 +315,6 @@
     <Content Include="Images2\inst.png" />
     <Content Include="Images2\Log in.png" />
     <Content Include="Images2\pil11new.png" />
-    <Content Include="Images2\print.png" />
     <Content Include="Images2\twitter.png" />
     <Content Include="Images2\volvo.jpg" />
     <Content Include="packages.config" />

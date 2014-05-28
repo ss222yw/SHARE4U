@@ -26,8 +26,33 @@ namespace Share4UProjekt.Pages.Cars
         }
 
 
+        private string Message
+        {
+            get
+            {
+                return Session["Message"] as string;
+            }
+            set
+            {
+                Session["Message"] = value;
+            }
+        }
+        protected void closeImg_Click(object sender, ImageClickEventArgs e)
+        {
+            ResponsePanel.Visible = true;
+            var close = Request.QueryString["Message"];
+            Response.RedirectToRoute("Subaru",close);
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Message != null)
+            {
+                ResponsePanel.Visible = true;
+                SuccessTest.Visible = true;
+                SuccessTest.Text = Message;
+                Session.Remove("Message");
+            }
 
         }
 
@@ -56,30 +81,17 @@ namespace Share4UProjekt.Pages.Cars
         }
 
 
-        private string Message
-        {
-            get
-            {
-                return Session["Message"] as string;
-            }
-            set
-            {
-                Session["Message"] = value;
-            }
-        }
-
         public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
 
         protected void ImageFavoriteButton_Command(object sender, CommandEventArgs e)
         {
             if (Access_Token != null)
             {
-                string data = FaceBookConnect.Fetch(Access_Token, "me");
-                FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
+                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser; 
                 string imgName = e.CommandName;
-                string usrID = faceBookUser.Id;
+                string usrID = fbUsr.Id;
                 FavoriteDAL f = new FavoriteDAL();
-                var lista = f.GetImgsFavoriteByName(faceBookUser.Id);
+                var lista = f.GetImgsFavoriteByName(fbUsr.Id);
                 foreach (var item in lista)
                 {
                     if (item.ImgName == imgName)

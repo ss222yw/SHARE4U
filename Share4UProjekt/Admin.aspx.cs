@@ -29,17 +29,6 @@ namespace Share4UProjekt
         {
             get { return _service ?? (_service = new Service()); }
         }
-        private string Message
-        {
-            get
-            {
-                return Session["Message"] as string;
-            }
-            set
-            {
-                Session["Message"] = value;
-            }
-        }
 
         public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
 
@@ -56,14 +45,36 @@ namespace Share4UProjekt
         {
             return Service.GetImgCategory();
         }
+
+
+        private string Message
+        {
+            get
+            {
+                return Session["Message"] as string;
+            }
+            set
+            {
+                Session["Message"] = value;
+            }
+        }
+        protected void closeImg_Click(object sender, ImageClickEventArgs e)
+        {
+            ResponsePanel.Visible = true;
+            var close = Request.QueryString["Message"];
+            Response.RedirectToRoute("Admin", close);
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Message != null)
             {
-                SuccessLabel.Visible = true;
-                SuccessLabel.Text = Message;
+                ResponsePanel.Visible = true;
+                SuccessTest.Visible = true;
+                SuccessTest.Text = Message;
                 Session.Remove("Message");
             }
+
             if (Access_Token == null)
             {
                 lblStatus.Text = "Logga in för att kunna styra innehållet!";
@@ -79,9 +90,8 @@ namespace Share4UProjekt
 
                 Global adminGlobal = new Global();
                 var admin = adminGlobal.Admin;
-                string data = FaceBookConnect.Fetch(Access_Token, "me");
-                FacebookOne facebookUser = new JavaScriptSerializer().Deserialize<FacebookOne>(data);
-                if (facebookUser.Id == admin)
+                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+                if (fbUsr.Id == admin)
                 {
                     CategoryDropDownList.Visible = true;
 
@@ -133,22 +143,29 @@ namespace Share4UProjekt
 
                                     }
                                 }
-
-                                Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
-                                int origWidth = originalBMP.Width;
-                                int origHeight = originalBMP.Height;
-                                int newWidth = 600;
-                                int newHeight = 400;
-                                Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
-                                Graphics oGraphics = Graphics.FromImage(newBMP);
-                                oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
-                                oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                                oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
-                                newBMP.Save(Path.Combine(imgFolder, f));
-                                originalBMP.Dispose();
-                                newBMP.Dispose();
-                                oGraphics.Dispose();
-
+                                if (fuUpload.PostedFile.ContentType == "image/gif")
+                                {
+                                    fuUpload.SaveAs(Path.Combine(imgFolder, f));
+                                }
+                                else
+                                {
+                                    //Tagit från stack over flow och implmenterat i min egen kod.
+                                    Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
+                                    int origWidth = originalBMP.Width;
+                                    int origHeight = originalBMP.Height;
+                                    int newWidth = 600;
+                                    int newHeight = 400;
+                                    Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
+                                    Graphics oGraphics = Graphics.FromImage(newBMP);
+                                    oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
+                                    oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                    oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
+                                    newBMP.Save(Path.Combine(imgFolder, f));
+                                    originalBMP.Dispose();
+                                    newBMP.Dispose();
+                                    oGraphics.Dispose();
+                                }
+                             
                                 var categoryID = 0;
 
                                 foreach (ListItem bm in CategoryDropDownList.Items)
@@ -161,10 +178,9 @@ namespace Share4UProjekt
                                 }
                                 var Title = TitleTextBox.Text;
                                 Message = "Bilden " + f + " har laddat upp ";
-                                string data = FaceBookConnect.Fetch(Access_Token, "me");
-                                FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
-                                Service.InsertUserImages(f, faceBookUser.Id, categoryID, Title);
-                                Response.RedirectToRoute("upload");
+                                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+                                Service.InsertUserImages(f, fbUsr.Id, categoryID, Title);
+                                Response.RedirectToRoute("Admin");
                             }
                             else
                                 lblStatus.Text = "Bilden får inte vara större än 5MB.";
@@ -178,7 +194,7 @@ namespace Share4UProjekt
                         lblStatus.Text = "Du måste välja en bild för att kunna ladda upp!.";
                 }
                 else
-                    lblStatus.Text = "Rubriken måste anges!";
+                    lblStatus.Text = "Modellen måste anges!";
             }
         }
 
@@ -190,8 +206,6 @@ namespace Share4UProjekt
         //     string sortByExpression
         public IEnumerable<Share4UProjekt.Model.Images> ImgListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
         {
-            string data = FaceBookConnect.Fetch(Access_Token, "me");
-            FacebookOne facebookUser = new JavaScriptSerializer().Deserialize<FacebookOne>(data);
             return Service.GetImagesPageWise(maximumRows, startRowIndex, out totalRowCount);
 
         }

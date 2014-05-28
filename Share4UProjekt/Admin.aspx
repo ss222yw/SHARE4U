@@ -8,7 +8,10 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Admin Sida!</h2>
          <%--Label för rätt meddalnde--%>
-    <asp:Label ID="SuccessLabel" Text="" runat="server" Visible="false" CssClass="success" />
+    <asp:Panel ID="ResponsePanel" runat="server" Visible="false">
+    <asp:Label ID="SuccessTest" Text="" runat="server"  CssClass="success" />
+         <asp:ImageButton ID="closeImg" runat="server" ImageUrl="~/Images2/delete.gif" CausesValidation="false" OnClick="closeImg_Click" />
+        </asp:Panel>
     <br />
     <%--Validtion summery för uppladdning.--%>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
@@ -20,14 +23,14 @@
     <br />
     <asp:Label ID="lblStatus" Text="" runat="server" />
     <br />
-    <%-- label som innehåller namn på rubriken.--%>
-    <label for="TitleTextBox" id="HeaderLabel" runat="server">Rubriken</label>
+    <%-- label som innehåller namn på Modellen.--%>
+    <label for="TitleTextBox" id="HeaderLabel" runat="server">Modell</label>
     <br />
     <%--    Textbox där skriver man rubrilken på en bild.--%>
     <asp:TextBox ID="TitleTextBox" runat="server" Text="" MaxLength="25" CssClass="Header" />
     <%--    validation för textboxen--%>
     <asp:RequiredFieldValidator ID="HeaderRequiredFieldValidator" runat="server"
-        ErrorMessage="Rubrik måste anges." ControlToValidate="TitleTextBox"
+        ErrorMessage="Modellen måste anges." ControlToValidate="TitleTextBox"
         Display="None">
     </asp:RequiredFieldValidator>
         <br />
@@ -43,7 +46,7 @@
             <ContentTemplate>
                 <asp:Label ID="lblText" runat="server" Text=""></asp:Label>
                 <div id="divImage" style="display:none">
-                     <asp:Image ID="img1" runat="server" ImageUrl="~/Images2/ajaxtest.gif"  />
+                     <asp:Image ID="img1" runat="server" ImageUrl="~/Images2/gif2.gif"  />
                      Laddar...
                 </div>                
                 <br />
@@ -109,7 +112,7 @@
                 <br />
                 <br />
                 </div><div class="editor-label">
-                    <label for="Header"><strong>Rubrik :</strong></label>
+                    <label for="Header"><strong>Modell :</strong></label>
                 </div>
                 <div class="editor-field">
                     <%#: Item.Title %>

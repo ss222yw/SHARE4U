@@ -6,7 +6,7 @@ using Microsoft.AspNet.FriendlyUrls;
 
 namespace Share4UProjekt
 {
-    public  class RouteConfig
+    public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -23,7 +23,7 @@ namespace Share4UProjekt
             routes.MapPageRoute("About", "OmOss", "~/Pages/Share4UPages/About.aspx");
 
             routes.MapPageRoute("SökResultat", "SökResultat", "~/Pages/Share4UPages/ShearchResult.aspx");
-            
+
             routes.MapPageRoute("AllCars", "BilarAlla", "~/Pages/Share4UPages/AllCars.aspx");
 
             routes.MapPageRoute("Contact", "kontaktaOss", "~/Pages/Share4UPages/Contact.aspx");

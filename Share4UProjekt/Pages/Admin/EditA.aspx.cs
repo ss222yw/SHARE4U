@@ -21,15 +21,42 @@ namespace Share4UProjekt.Pages.Admin
             get { return _service ?? (_service = new Service()); }
         }
         public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
+
+
+
+        private string Message
+        {
+            get
+            {
+                return Session["Message"] as string;
+            }
+            set
+            {
+                Session["Message"] = value;
+            }
+        }
+        protected void closeImg_Click(object sender, ImageClickEventArgs e)
+        {
+            ResponsePanel.Visible = true;
+            var close = Request.QueryString["Message"];
+            Response.RedirectToRoute("Admin", close);
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Message != null)
+            {
+                ResponsePanel.Visible = true;
+                SuccessTest.Visible = true;
+                SuccessTest.Text = Message;
+                Session.Remove("Message");
+            }
+
             if (Access_Token == null)
             {
                 EditFormView.Visible = false;
 
             }
-
-         
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -41,17 +68,16 @@ namespace Share4UProjekt.Pages.Admin
             {
                 Global adminGlobal = new Global();
                 var admin = adminGlobal.Admin;
-                string data = FaceBookConnect.Fetch(Access_Token, "me");
-                FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
-                if (admin == faceBookUser.Id)
+                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+                if (admin == fbUsr.Id)
                 {
                     EditFormView.Visible = true;
                     return Service.GetImgsDataByID(id);
                 }
                 else
                 {
-                    Suc.Visible = true;
-                    Suc.Text = "Detta är en admin sida!";
+                    SuccessTest.Visible = true;
+                    SuccessTest.Text = "Detta är en admin sida!";
                     EditFormView.Visible = false;
                 }
                 

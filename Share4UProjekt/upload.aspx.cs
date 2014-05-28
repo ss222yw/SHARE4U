@@ -27,17 +27,7 @@ namespace Share4UProjekt
         {
             get { return _service ?? (_service = new Service()); }
         }
-        private string Message
-        {
-            get
-            {
-                return Session["Message"] as string;
-            }
-            set
-            {
-                Session["Message"] = value;
-            }
-        }
+
 
         public string Access_Token { get { return ((SiteMaster)this.Master).Access_Token; } }
 
@@ -54,13 +44,32 @@ namespace Share4UProjekt
         {
             return Service.GetImgCategory();
         }
+
+        private string Message
+        {
+            get
+            {
+                return Session["Message"] as string;
+            }
+            set
+            {
+                Session["Message"] = value;
+            }
+        }
+        protected void closeImg_Click(object sender, ImageClickEventArgs e)
+        {
+            ResponsePanel.Visible = true;
+            var close = Request.QueryString["Message"];
+            Response.RedirectToRoute("upload", close);
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (Message != null)
             {
-                SuccessLabel.Visible = true;
-                SuccessLabel.Text = Message;
+                ResponsePanel.Visible = true;
+                SuccessTest.Visible = true;
+                SuccessTest.Text = Message;
                 Session.Remove("Message");
             }
 
@@ -114,23 +123,30 @@ namespace Share4UProjekt
 
                                         }
                                     }
-                                   
 
 
-                                    Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
-                                    int origWidth = originalBMP.Width;
-                                    int origHeight = originalBMP.Height;
-                                    int newWidth = 600;
-                                    int newHeight = 400;
-                                    Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
-                                    Graphics oGraphics = Graphics.FromImage(newBMP);
-                                    oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
-                                    oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                                    oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
-                                    newBMP.Save(Path.Combine(imgFolder, f));
-                                    originalBMP.Dispose();
-                                    newBMP.Dispose();
-                                    oGraphics.Dispose();
+                                    if (fuUpload.PostedFile.ContentType == "image/gif")
+                                    {
+                                        fuUpload.SaveAs(Path.Combine(imgFolder, f));
+                                    }
+                                    else
+                                    {
+                                        //Tagit från stack over flow och implmenterat i min egen kod.
+                                        Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
+                                        int origWidth = originalBMP.Width;
+                                        int origHeight = originalBMP.Height;
+                                        int newWidth = 600;
+                                        int newHeight = 400;
+                                        Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
+                                        Graphics oGraphics = Graphics.FromImage(newBMP);
+                                        oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
+                                        oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                        oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
+                                        newBMP.Save(Path.Combine(imgFolder, f));
+                                        originalBMP.Dispose();
+                                        newBMP.Dispose();
+                                        oGraphics.Dispose();
+                                    }
 
                                     var categoryID = 0;
 
@@ -144,9 +160,8 @@ namespace Share4UProjekt
                                     }
                                     var Title = TitleTextBox.Text;
                                     Message = "Bilden har laddat upp " + f;
-                                    string data = FaceBookConnect.Fetch(Access_Token, "me");
-                                    FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
-                                    Service.InsertUserImages(f, faceBookUser.Id, categoryID, Title);
+                                    FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+                                    Service.InsertUserImages(f, fbUsr.Id, categoryID, Title);
                                     Response.RedirectToRoute("upload");
                                 }
                                 else
@@ -165,7 +180,7 @@ namespace Share4UProjekt
                         lblStatus.Text = "Du måste välja en bild och skriva  för att kunna ladda upp!.";
                 }
                 else
-                    lblStatus.Text = "Rubriken måste anges!";
+                    lblStatus.Text = "Modellen måste anges!";
             }
         }
 
@@ -177,9 +192,8 @@ namespace Share4UProjekt
         //     string sortByExpression
         public IEnumerable<Share4UProjekt.Model.Images> ImgListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
         {
-            string data = FaceBookConnect.Fetch(Access_Token, "me");
-            FacebookOne facebookUser = new JavaScriptSerializer().Deserialize<FacebookOne>(data);
-            return Service.GetUsrPageWiseByID(maximumRows, startRowIndex, out totalRowCount, facebookUser.Id);
+            FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+            return Service.GetUsrPageWiseByID(maximumRows, startRowIndex, out totalRowCount, fbUsr.Id);
         }
 
 
@@ -205,6 +219,5 @@ namespace Share4UProjekt
                 ModelState.AddModelError(String.Empty, "Ett oväntat fel inträffade då bilden skulle tas bort.");
             }
         }
-
     }
 }
