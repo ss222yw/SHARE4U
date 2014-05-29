@@ -47,7 +47,7 @@ namespace Share4UProjekt.Pages.Share4UPages
                         smtp.Credentials = NetworkCred;
                         smtp.Port = 587;
                         smtp.Send(mm);
-                        ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Vi har tagit emot din meddlande och svarar så snart så möjligt. Tack för att du kontaktat oss.!.');", true);
+                        ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Vi har tagit emot ditt meddlande och svarar så snart som möjligt. Tack för att du kontaktat oss!.');", true);
                     }
                     catch (Exception)
                     {

@@ -16,7 +16,10 @@
     <h1>Välkommen tiill ShareCarsPics4U</h1>
     <br />
     <br />
-    <h2> Dela bilder som du tycker är Intressanta om bilar, få riktiga svar från människor över hela sverige, och upptäck vilka som gör dig lycklig.</h2>
+    <div id="TEXTDEFAULT">
+        <h2>Dela bilder som du tycker är Intressanta om bilar, få riktiga svar från människor över hela sverige  , och  
+            upptäck vad som gör dig lycklig.</h2>
+    </div>
     <br />
     <br />
     <%--    Tagit från http://www.serie3.info/s3slider/ och implemnterat den så den passar med min sida.--%>

@@ -7,7 +7,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: white;
-        background-image: url("../Images2/cr.jpg");
+    background-image: url("../Images2/cr.jpg");
     color: white;
     background-repeat: no-repeat;
     background-color: black;
@@ -125,6 +125,10 @@ logo header .site-title {
     margin-top: -2%;
 }
 
+div#TEXTDEFAULT {
+    padding-left: 60PX;
+    padding-right: 65PX;
+}
 /*Tagit css styling från css online styling ändrat så den passar min sida*/
 div#MainContent_ValidationSummary1 {
     float: right;
@@ -266,8 +270,8 @@ input#MainContent_btnDelete {
 height: 30px;
 Width: 140px;
 float: left;
-margin-left: 1px;
-margin-top: 169px;
+margin-left: 35px;
+margin-top: 168px;
 }
 
 .btnLogout {
@@ -295,195 +299,6 @@ a#HyperLink46 {
         height: 196px;
     }
 
-
-/*Tagit css styling från css online styling ändrat så den passar min sida*/
-#nav {
-    width: 80%;
-    position: relative;
-    top: 25%;
-}
-
-    #nav > a {
-        display: none;
-    }
-
-    #nav li {
-        position: relative;
-    }
-
-        #nav li a {
-            color: white;
-            display: block;
-            text-decoration: none;
-        }
-
-            #nav li a:active {
-                background-color: black !important;
-            }
-
-    #nav span:after {
-        width: 0;
-        height: 0;
-        border: 0.313em solid transparent; /* 5 */
-        border-bottom: none;
-        border-top-color: black;
-        content: '';
-        vertical-align: middle;
-        display: inline-block;
-        position: relative;
-        right: -0.313em; /* 5 */
-    }
-
-    /* first level */
-
-    #nav > ul {
-        height: 2.75em; /* 60 */
-        background-color: black;
-    }
-
-        #nav > ul > li {
-            width: 20%;
-            height: 100%;
-            float: left;
-        }
-
-            #nav > ul > li > a {
-                height: 100%;
-                line-height: 2.5em;
-                text-align: center;
-            }
-
-            #nav > ul > li:not( :last-child ) > a {
-                border-right: 1px solid white;
-            }
-
-            #nav > ul > li:hover > a,
-            #nav > ul:not( :hover ) > li.active > a {
-                background-color: white;
-                color: black;
-            }
-
-
-    /* second level */
-
-    #nav li ul {
-        background-color: black;
-        display: none;
-        position: absolute;
-        top: 100%;
-    }
-
-    #nav li:hover ul {
-        display: block;
-        left: 0;
-        right: 0;
-    }
-
-    #nav li:not( :first-child ):hover ul {
-        left: -1px;
-    }
-
-    #nav li ul a {
-        border-top: 1px solid black;
-        padding: 0.75em; /* 15 (20) */
-        text-decoration: none;
-    }
-
-    #nav li ul li a:hover,
-    #nav li ul:not( :hover ) li.active a {
-        background-color: white;
-        color: black;
-    }
-
-/*Tagit css styling från css online styling ändrat så den passar min sida*/
-@media only screen and ( max-width: 62.5em ) /* 1000 */
-{
-    #nav {
-        width: 100%;
-        position: static;
-        margin: 0;
-    }
-}
-
-@media only screen and ( max-width: 40em ) /* 640 */
-{
-    html {
-    }
-
-    #nav {
-        position: relative;
-        top: auto;
-        left: auto;
-    }
-
-        #nav > a {
-            width: 3.125em; /* 50 */
-            height: 3.125em; /* 50 */
-            text-align: left;
-            text-indent: -9999px;
-            background-color: black;
-            position: relative;
-        }
-
-            #nav > a:before,
-            #nav > a:after {
-                position: absolute;
-                border: 2px solid white;
-                top: 35%;
-                left: 25%;
-                right: 25%;
-                content: '';
-            }
-
-            #nav > a:after {
-                top: 60%;
-            }
-
-        #nav:not( :target ) > a:first-of-type,
-        #nav:target > a:last-of-type {
-            display: block;
-        }
-
-
-        /* first level */
-
-        #nav > ul {
-            height: auto;
-            display: none;
-            position: absolute;
-            left: 0;
-            right: 0;
-        }
-
-        #nav:target > ul {
-            display: block;
-        }
-
-        #nav > ul > li {
-            width: 100%;
-            float: none;
-        }
-
-            #nav > ul > li > a {
-                height: auto;
-                text-align: left;
-                padding: 0 0.833em; /* 20 (24) */
-            }
-
-            #nav > ul > li:not( :last-child ) > a {
-                border-right: none;
-                border-bottom: 1px solid white;
-            }
-
-
-        /* second level */
-
-        #nav li ul {
-            position: static;
-            padding: 1.25em; /* 20 */
-            padding-top: 0;
-        }
-}
 
 .carBrandsLogo img {
     width: 63px;
@@ -513,8 +328,8 @@ a {
 }
 
 .ImgSearchSize {
-width: 600px;
-height: 400px;
+    width: 600px;
+    height: 400px;
 }
 /*Tagit css styling från css online styling ändrat så den passar min sida*/
 .Green {
@@ -562,7 +377,7 @@ height: 400px;
         top: 1px;
     }
 
-    /*Tagit css styling från css online styling ändrat så den passar min sida*/
+/*Tagit css styling från css online styling ändrat så den passar min sida*/
 .editButtons {
     -moz-box-shadow: inset 0px 1px 0px 0px #caefab;
     -webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
@@ -669,11 +484,10 @@ span#MainContent_ImagesListView_DataPager {
 
 div#pnlFbUser {
 float: left;
-margin-top: 96px;
+margin-top: 95px;
 color: rgb(174, 190, 255);
-margin-left: 1px;
+margin-left: 36px;
 }
-
 .ShareCarsPics4ULogo img {
     margin: -88px 0px 0px 200px;
     position: absolute;
@@ -713,7 +527,7 @@ h1, h2 {
     }
 
 
-    /*Tagit css styling från css online styling ändrat så den passar min sida*/
+/*Tagit css styling från css online styling ändrat så den passar min sida*/
 DataPageButton {
     -moz-box-shadow: inset 0px 1px 0px 0px #d9fbbe;
     -webkit-box-shadow: inset 0px 1px 0px 0px #18696D;
@@ -1808,38 +1622,25 @@ img#personalpic2 {
     color: #79bbff;
 }
 
-
-
-
-input#TextBox1 {
-    float: right;
-    margin-top: -43px;
-    margin-right: 42px;
-    box-shadow: 0px 1px 3px -1px rgb(14, 6, 6) inset;
-    background-color: rgb(255, 255, 255);
-    border: 0.5px solid rgb(0, 0, 0);
-    color: rgb(76, 76, 76);
-    display: inline-block;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 12px;
-    width: 146px;
-    height: 39px;
+div#tfheader {
+margin-top: -2.9%;
+margin-right: 10px;
 }
-
 
 
 
 .Search {
-float: right;
-text-align: center;
-margin-top: -43px;
-font-size: small;
-color: white;
-background-color: #3A6192;
-width: 42px;
-height: 41.4px;
+    float: right;
+    text-align: center;
+    margin-top: -43px;
+    font-size: small;
+    color: white;
+    background-color: #3A6192;
+    width: 42px;
+    height: 41.4px;
 }
-  .Search:hover {
+
+    .Search:hover {
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, hsl(228, 92%, 50%)), color-stop(1, hsl(223, 79%, 50%)));
         background: -moz-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
         background: -webkit-linear-gradient(top, hsl(254, 57%, 42%) 5%, hsl(238, 70%, 41%) 100%);
@@ -1850,7 +1651,195 @@ height: 41.4px;
         background-color: hsl(221, 38%, 49%);
     }
 
-    input#Button1:active {
-        position: relative;
-        top: 1px;
+input#Button1:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+/*Tagit från http://onlinehtmltools.com/menu-generator/#*/
+
+#menu_wrap {
+position: relative;
+margin-top: 0px;
+margin-left: auto;
+margin-right: auto;
+padding: 0;
+padding-right: 0px;
+width: 888px;
+height: 40px;
+list-style-type: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+.button a {
+    cursor: pointer;
+    text-align: center;
+    font: 13px/100% Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    min-width: 50px;
+    height: 20px;
+    float: left;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+
+.button:first-child a {
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-topleft-radius: 10px;
+    -moz-border-bottomleft-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.Black, .Black .button a {
+    color: #d7d7d7;
+    background: #666666;
+    border-right: solid 1px #000000;
+    background: -moz-linear-gradient(top, #666666 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666666), color-stop(100%,#000000));
+    background: -webkit-linear-gradient(top, #666666 0%,#000000 100%);
+    background: -o-linear-gradient(top, #666666 0%,#000000 100%);
+    background: -ms-linear-gradient(top, #666666 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000',GradientType=0 );
+    background: linear-gradient(top, #666666 0%,#000000 100%);
+}
+
+    .Black .button a:hover, .Black .button a:focus {
+        background: #444444;
+        background: -moz-linear-gradient(top, #444444 0%, #000000 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(100%,#000000));
+        background: -webkit-linear-gradient(top, #444444 0%,#000000 100%);
+        background: -o-linear-gradient(top, #444444 0%,#000000 100%);
+        background: -ms-linear-gradient(top, #444444 0%,#000000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#000000',GradientType=0 );
+        background: linear-gradient(top, #444444 0%,#000000 100%);
     }
+
+    .Black .button a:active {
+        color: #666;
+        background: #000000;
+        background: -moz-linear-gradient(top, #000000 0%, #444444 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#444444));
+        background: -webkit-linear-gradient(top, #000000 0%,#444444 100%);
+        background: -o-linear-gradient(top, #000000 0%,#444444 100%);
+        background: -ms-linear-gradient(top, #000000 0%,#444444 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#444444',GradientType=0 );
+        background: linear-gradient(top, #000000 0%,#444444 100%);
+    }
+
+.search {
+    position: relative;
+    float: right;
+    margin-top: 10px;
+}
+
+    .search input[type=text] {
+        width: 120px;
+        height: 20px;
+        padding-left: 18px;
+        margin-left: 10px;
+        padding-right: 4px;
+        outline: none;
+        border: none;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        -moz-box-shadow: inset 1px 1px 3px #7a7a7a;
+        box-shadow: inset 1px 1px 3px #7a7a7a;
+    }
+
+    .search a:before {
+        width: 6px;
+        height: 6px;
+        border: 2px solid #000;
+        background: transparent;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+    }
+
+    .search a:after {
+        left: 24px;
+        width: 2px;
+        height: 7px;
+        margin-top: 0;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+li a:before, li a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+li a:before, li a:after {
+    margin: -7px 0 0;
+    background: #000;
+}
+
+#tfnewsearch {
+    float: right;
+    padding: 20px;
+}
+
+.tftextinput {
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 1px solid #0076a3;
+    border-right: 0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+}
+
+.tfbutton {
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #0076a3;
+    border-right: 0px;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top, #00adee, #0078a5);
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+}
+
+    .tfbutton:hover {
+        text-decoration: none;
+        background: #007ead;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+        background: -moz-linear-gradient(top, #0095cc, #00678e);
+    }
+    /* Fixes submit button height problem in Firefox */
+    .tfbutton::-moz-focus-inner {
+        border: 0;
+    }
+
+.tfclear {
+    clear: both;
+}

@@ -86,7 +86,8 @@ namespace Share4UProjekt.Pages.Cars
         {
             if (Access_Token != null)
             {
-                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser; 
+                string FbUsrData = FaceBookConnect.Fetch(Access_Token, "me");
+                var fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
                 string imgName = e.CommandName;
                 string usrID = fbUsr.Id;
                 FavoriteDAL f = new FavoriteDAL();

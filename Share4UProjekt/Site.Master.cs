@@ -42,14 +42,50 @@ namespace Share4UProjekt
         /// <summary>
         /// Hämtar access token för facebook inlogging system.
         /// </summary>
-        private static string access_token;
+
+        /// <summary>
+        /// access token session
+        /// </summary>
+        private string access_token
+        {
+            get
+            {
+                return Session["code"] as string;
+            }
+            set
+            {
+                Session["code"] = value;
+            }
+        }
+
         public string Access_Token
         {
             get { return access_token; }
         }
+        /// <summary>
+        /// Title session
+        /// </summary>
+        private string modell
+        {
+            get
+            {
+                return Session["Title"] as string;
+            }
+            set
+            {
+                Session["Title"] = value;
+            }
+        }
+
+        public string Modell
+        {
+            get { return modell; }
+        }
+
+
 
         /// <summary>
-        /// Sparar facebook access token i cookis så den kommer ihåg att man inloggad även om man flyttar mellan sidorna i websajten.
+        /// Sparar facebook access token i session så den kommer ihåg att man inloggad även om man flyttar mellan sidorna i websajten.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -58,7 +94,6 @@ namespace Share4UProjekt
             if (access_token == null)
             {
                 access_token = Request.QueryString["code"];
-                Page.ViewStateUserKey = access_token;
                 if (access_token != null)
                 {
                     string[] separateURL = url.Split('?');
@@ -68,28 +103,29 @@ namespace Share4UProjekt
                     Response.Redirect(url);
                 }
             }
-            else
-            {
-                Page.ViewStateUserKey = access_token;
-            }
+         
             Page.PreLoad += master_Page_PreLoad;
         }
 
-
-        public FaceBookUser GetUserInfo(bool refresh = false)
+        /// <summary>
+        /// Master page load , kollar om man är inloggad då hämtar users  id , access token och imgurl.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void master_Page_PreLoad(object sender, EventArgs e)
         {
-            FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+            AuthConfig.RegisterOpenAuth();
+            if (Request.QueryString["logout"] == "true")
+            {
 
+                access_token = null;
+                return;
+            }
             if (!string.IsNullOrEmpty(access_token))
             {
 
-
-                if (fbUsr == null || refresh)
-                {
-                    string FbUsrData = FaceBookConnect.Fetch(access_token, "me");
-                    fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
-                    HttpContext.Current.Cache.Insert("GetUserInfo", fbUsr, null, DateTime.Now.AddMinutes(20), TimeSpan.Zero);
-                }
+                string FbUsrData = FaceBookConnect.Fetch(access_token, "me");
+                FaceBookUser fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
                 //Tagit en delvis kod från aspsnipet.
                 fbUsr.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", fbUsr.Id);
                 pnlFbUser.Visible = true;
@@ -103,29 +139,6 @@ namespace Share4UProjekt
                     insertFacebook.InsertFacebookUserInfo(access_token, fbUsr.Id, fbUsr.Name);
                 }
             }
-            return fbUsr;
-        }
-
-        public void ClearUserInfo()
-        {
-            var RemovData = HttpContext.Current.Cache.Remove("GetUserInfo");
-        }
-
-        /// <summary>
-        /// Master page load , kollar om man är inloggad då hämtar users  id , access token och imgurl.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void master_Page_PreLoad(object sender, EventArgs e)
-        {
-            AuthConfig.RegisterOpenAuth();
-            if (Request.QueryString["logout"] == "true")
-            {
-                ClearUserInfo();
-                access_token = null;
-                return;
-            }
-            GetUserInfo();
         }
 
         /// <summary>
@@ -155,7 +168,6 @@ namespace Share4UProjekt
         /// <summary>
         /// page load där kollar om message session har meddlande eller inte samt kollar om man har sökt om efter Modell eller inte.
         /// </summary>
-        string testOne;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Message != null)
@@ -167,21 +179,10 @@ namespace Share4UProjekt
 
             if (Request.QueryString["Title"] != null)
             {
-                ImagesDAL dal = new ImagesDAL();
-                testOne = Request.QueryString["Title"];
-                searchLbl.Text = "Sökresultat för : (" + testOne + ")";
-                dal.DisplaySearchResults(testOne);
-                if (testOne != string.Empty)
-                {
-                    Repeater1.DataSource = dal.DisplaySearchResults(testOne);
-                    Repeater1.DataBind();
+                
+                modell = Request.QueryString["Title"];
+                Response.RedirectToRoute("SokResultat");
 
-                }
-
-                else
-                {
-                    //Tom
-                }
             }
 
         }
@@ -191,7 +192,6 @@ namespace Share4UProjekt
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        /// tagit lite info från Developer Network microsoft.
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("SökResultat?Title=" + Server.UrlEncode(TextBox1.Text));

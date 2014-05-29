@@ -76,7 +76,10 @@
         <EmptyDataTemplate>
             <table>
                 <tr>
-                    <td>Bilderna saknas.
+                    <td>
+                        <asp:Image
+                            ImageUrl="../../Images2/Bild-Saknas.jpg" ID="imgUserPhoto"
+                            runat="server" />
                     </td>
                 </tr>
             </table>

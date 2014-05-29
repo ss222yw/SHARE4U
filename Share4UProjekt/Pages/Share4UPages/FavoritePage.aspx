@@ -62,7 +62,10 @@
         <EmptyDataTemplate>
             <table>
                 <tr>
-                    <td>Din favorit lista är tom!
+                    <td>
+                        <asp:Image
+                            ImageUrl="../../Images2/Bild-Saknas.jpg" ID="imgUserPhoto"
+                            runat="server" />
                     </td>
                 </tr>
             </table>

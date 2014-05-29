@@ -90,7 +90,8 @@ namespace Share4UProjekt
 
                 Global adminGlobal = new Global();
                 var admin = adminGlobal.Admin;
-                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+                string FbUsrData = FaceBookConnect.Fetch(Access_Token, "me");
+                var fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
                 if (fbUsr.Id == admin)
                 {
                     CategoryDropDownList.Visible = true;
@@ -178,7 +179,8 @@ namespace Share4UProjekt
                                 }
                                 var Title = TitleTextBox.Text;
                                 Message = "Bilden " + f + " har laddat upp ";
-                                FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+                                string FbUsrData = FaceBookConnect.Fetch(Access_Token, "me");
+                                var fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
                                 Service.InsertUserImages(f, fbUsr.Id, categoryID, Title);
                                 Response.RedirectToRoute("Admin");
                             }

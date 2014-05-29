@@ -62,16 +62,16 @@
             </td>
         </tr>
         <tr>
-            <td>Gmail E-post:
+            <td>LNU E-post:
             </td>
             <td>
-                <asp:TextBox ID="txtEmail" runat="server" placeholder="exampel@gmail.com"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" placeholder="ex@student.lnu.se/gmail.com"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
-                    ErrorMessage="Skriv in din gmail epost" ControlToValidate="txtEmail"
+                    ErrorMessage="Skriv in din LNU epost" ControlToValidate="txtEmail"
                     Display="None">
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                        ErrorMessage="E-posten måste vara av denna format exampel@gmail.com"
-                        ValidationExpression="^([\w]*[\w\.]*(?!\.)@gmail.com)$"
+                        ErrorMessage="E-posten måste vara av denna format exampel@student.lnu.se eller exampel@gmail.com"
+                        ValidationExpression="^\w+([-+.]\w+)*@(student.lnu.se|gmail.com)$"
                         ControlToValidate="txtEmail">
                     </asp:RegularExpressionValidator>
                 </asp:RequiredFieldValidator>
@@ -82,12 +82,12 @@
             </td>
         </tr>
         <tr>
-            <td>Gmail Lösenord:
+            <td>LNU Lösenord:
             </td>
             <td>
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="*****************"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
-                    ErrorMessage="matta in din gmail lösen ord" ControlToValidate="txtPassword"
+                    ErrorMessage="matta in din LNU lösen ord" ControlToValidate="txtPassword"
                     Display="None">
                 </asp:RequiredFieldValidator>
             </td>

@@ -24,12 +24,13 @@ namespace Share4UProjekt
 
         }
 
+
+        public string Admin { get { return admin; } }
+
+
         void Application_Error(object sender, EventArgs e)
         {
 
         }
-
-        public string Admin { get { return admin; } }
-
     }
 }

@@ -62,7 +62,8 @@ namespace Share4UProjekt.Pages.Share4UPages
         public Share4UProjekt.Model.Images EditFormView_GetItem([RouteData]int id)
         {
             var usrEdit =  Service.GetImgsDataByID(id);
-            FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+            string FbUsrData = FaceBookConnect.Fetch(Access_Token, "me");
+            var fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
             try
             {
                 if (fbUsr.Id != usrEdit.userid)

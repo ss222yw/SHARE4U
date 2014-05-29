@@ -335,5 +335,8 @@ namespace Share4UProjekt.Model.DAL
                 }
             }
         }
+
+        public int counter { get; set; }
+          
     }
 }

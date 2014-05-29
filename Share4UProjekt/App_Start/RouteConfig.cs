@@ -113,6 +113,10 @@ namespace Share4UProjekt
             routes.MapPageRoute("ShowImage", "ImagesKommentarer{id}", "~/Pages/Share4UPages/showImg.aspx");
 
             routes.MapPageRoute("FavoritePage", "FavoritSida", "~/Pages/Share4UPages/FavoritePage.aspx");
+
+            routes.MapPageRoute("SokResultat", "SokResultat", "~/Pages/Share4UPages/ShearchResult.aspx");
+            
+            routes.MapPageRoute("Error", "Fel", "~/Error.aspx");
         }
     }
 }

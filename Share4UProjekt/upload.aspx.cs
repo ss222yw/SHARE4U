@@ -91,96 +91,112 @@ namespace Share4UProjekt
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            if (IsValid)
+
+            if (Access_Token != null)
             {
-                if (TitleTextBox.Text != string.Empty)
+
+                if (IsValid)
                 {
-
-                    if (fuUpload.HasFile && fuUpload.PostedFile != null)
+                    if (TitleTextBox.Text != string.Empty)
                     {
-                        if (fuUpload.FileName.Length <= 100)
+
+                        if (fuUpload.HasFile && fuUpload.PostedFile != null)
                         {
-
-                            if ((fuUpload.PostedFile.ContentType == "image/png") ||
-                                 (fuUpload.PostedFile.ContentType == "image/jpeg") ||
-                                (fuUpload.PostedFile.ContentType == "image/jpg") ||
-                                 (fuUpload.PostedFile.ContentType == "image/gif"))
+                            if (fuUpload.FileName.Length <= 100)
                             {
-                                if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)
+
+                                if ((fuUpload.PostedFile.ContentType == "image/png") ||
+                                     (fuUpload.PostedFile.ContentType == "image/jpeg") ||
+                                    (fuUpload.PostedFile.ContentType == "image/jpg") ||
+                                     (fuUpload.PostedFile.ContentType == "image/gif"))
                                 {
-                                    string imgFolder = Path.Combine(fromRootToPhoto, User.Identity.Name);
-                                    int count = 1;
-                                    string f = fuUpload.FileName;
-                                    if (Exists(f))
+                                    if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)
                                     {
-
-                                        string extension = Path.GetExtension(f);
-                                        string nameOnly = Path.GetFileNameWithoutExtension(f);
-                                        while (Exists(f))
+                                        string imgFolder = Path.Combine(fromRootToPhoto, User.Identity.Name);
+                                        int count = 1;
+                                        string f = fuUpload.FileName;
+                                        if (Exists(f))
                                         {
-                                            f = string.Format("{0}({1}){2}", nameOnly, count, extension);
-                                            count++;
 
+                                            string extension = Path.GetExtension(f);
+                                            string nameOnly = Path.GetFileNameWithoutExtension(f);
+                                            while (Exists(f))
+                                            {
+                                                f = string.Format("{0}({1}){2}", nameOnly, count, extension);
+                                                count++;
+
+                                            }
                                         }
-                                    }
 
 
-                                    if (fuUpload.PostedFile.ContentType == "image/gif")
-                                    {
-                                        fuUpload.SaveAs(Path.Combine(imgFolder, f));
+                                        if (fuUpload.PostedFile.ContentType == "image/gif")
+                                        {
+                                            fuUpload.SaveAs(Path.Combine(imgFolder, f));
+                                        }
+                                        else
+                                        {
+                                            //Tagit från stack over flow och implmenterat i min egen kod.
+                                            Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
+                                            int origWidth = originalBMP.Width;
+                                            int origHeight = originalBMP.Height;
+                                            int newWidth = 600;
+                                            int newHeight = 400;
+                                            Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
+                                            Graphics oGraphics = Graphics.FromImage(newBMP);
+                                            oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
+                                            oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                            oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
+                                            newBMP.Save(Path.Combine(imgFolder, f));
+                                            originalBMP.Dispose();
+                                            newBMP.Dispose();
+                                            oGraphics.Dispose();
+                                        }
+
+                                        var categoryID = 0;
+
+                                        foreach (ListItem bm in CategoryDropDownList.Items)
+                                        {
+                                            if (bm.Selected)
+                                            {
+                                                categoryID = int.Parse(bm.Value);
+
+                                            }
+                                        }
+                                        var Title = TitleTextBox.Text;
+                                        Message = "Bilden har laddat upp " + f;
+                                        string FbUsrData = FaceBookConnect.Fetch(Access_Token, "me");
+                                        var fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
+                                        Service.InsertUserImages(f, fbUsr.Id, categoryID, Title);
+                                        Response.RedirectToRoute("upload");
                                     }
                                     else
-                                    {
-                                        //Tagit från stack over flow och implmenterat i min egen kod.
-                                        Bitmap originalBMP = new Bitmap(fuUpload.FileContent);
-                                        int origWidth = originalBMP.Width;
-                                        int origHeight = originalBMP.Height;
-                                        int newWidth = 600;
-                                        int newHeight = 400;
-                                        Bitmap newBMP = new Bitmap(originalBMP, newWidth, newHeight);
-                                        Graphics oGraphics = Graphics.FromImage(newBMP);
-                                        oGraphics.SmoothingMode = SmoothingMode.AntiAlias;
-                                        oGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                                        oGraphics.DrawImage(originalBMP, 0, 0, newWidth, newHeight);
-                                        newBMP.Save(Path.Combine(imgFolder, f));
-                                        originalBMP.Dispose();
-                                        newBMP.Dispose();
-                                        oGraphics.Dispose();
-                                    }
-
-                                    var categoryID = 0;
-
-                                    foreach (ListItem bm in CategoryDropDownList.Items)
-                                    {
-                                        if (bm.Selected)
-                                        {
-                                            categoryID = int.Parse(bm.Value);
-
-                                        }
-                                    }
-                                    var Title = TitleTextBox.Text;
-                                    Message = "Bilden har laddat upp " + f;
-                                    FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
-                                    Service.InsertUserImages(f, fbUsr.Id, categoryID, Title);
-                                    Response.RedirectToRoute("upload");
+                                        lblStatus.Text = "Bilden får inte vara större än 5MB.";
                                 }
                                 else
-                                    lblStatus.Text = "Bilden får inte vara större än 5MB.";
+                                    lblStatus.Text = "Bilden måste vara av typen png, jpg, jpeg eller gif.";
+
                             }
                             else
-                                lblStatus.Text = "Bilden måste vara av typen png, jpg, jpeg eller gif.";
-
+                                lblStatus.Text = "Namn på bilden får inte vara större än 95 tecken.";
                         }
+
                         else
-                            lblStatus.Text = "Namn på bilden får inte vara större än 95 tecken.";
+
+                            lblStatus.Text = "Du måste välja en bild och skriva  för att kunna ladda upp!.";
                     }
-
                     else
-
-                        lblStatus.Text = "Du måste välja en bild och skriva  för att kunna ladda upp!.";
+                        lblStatus.Text = "Modellen måste anges!";
                 }
-                else
-                    lblStatus.Text = "Modellen måste anges!";
+            }
+            else
+            {
+                lblStatus.Text = "Logga in för att kunna ladda upp!!!";
+                fuUpload.Visible = false;
+                btnUpload.Visible = false;
+                CategoryDropDownList.Visible = false;
+                ImgListView.Visible = false;
+                TitleTextBox.Visible = false;
+                HeaderLabel.Visible = false;
             }
         }
 
@@ -192,7 +208,8 @@ namespace Share4UProjekt
         //     string sortByExpression
         public IEnumerable<Share4UProjekt.Model.Images> ImgListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
         {
-            FaceBookUser fbUsr = HttpContext.Current.Cache["GetUserInfo"] as FaceBookUser;
+            string FbUsrData = FaceBookConnect.Fetch(Access_Token, "me");
+            var fbUsr = new JavaScriptSerializer().Deserialize<FaceBookUser>(FbUsrData);
             return Service.GetUsrPageWiseByID(maximumRows, startRowIndex, out totalRowCount, fbUsr.Id);
         }
 

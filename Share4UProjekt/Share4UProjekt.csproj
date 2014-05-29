@@ -344,7 +344,7 @@
     <Content Include="Pages\Cars\Volkswagen.aspx" />
     <Content Include="Pages\Cars\VOLVO.aspx" />
     <Content Include="Pages\Share4UPages\Edit.aspx" />
-    <Content Include="Pages\Share4UPages\Error.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Pages\Share4UPages\FavoritePage.aspx" />
     <Content Include="Pages\Share4UPages\MsgBoxForm.aspx" />
     <Content Include="Pages\Share4UPages\ShearchResult.aspx" />
@@ -723,11 +723,11 @@
     <Compile Include="Pages\Share4UPages\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Share4UPages\Error.aspx.cs">
+    <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Share4UPages\Error.aspx.designer.cs">
+    <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Share4UPages\FavoritePage.aspx.cs">

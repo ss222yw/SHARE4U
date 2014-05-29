@@ -18,6 +18,7 @@
     <div id="wrapper">
         <form runat="server">
             <div id="header">
+<%--                <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>--%>
                 <%--ShareCarsPics4U Logo--%>
                 <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>" ImageUrl="../Images2/save100.png"></asp:HyperLink>
                 <%-- Inloggning system via facebook--%>
@@ -49,41 +50,36 @@
                 <header>
                 </header>
             </div>
-            <%--Tagit en vis del kod för göra den menu responsiv--%>
+            <%--Tagit en vis del css för göra menu--%>
             <div id="navigation1">
-                <nav id="nav" role="navigation">
-                    <a href="#nav" title="Visa meny">Visa meny</a>
-                    <a href="#" title="Göm meny">Göm meny</a>
-                    <ul>
-                        <li>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>">HEM</asp:HyperLink><ul>
-                            </ul>
-                        </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="<%$ RouteUrl:routename=AllCars %>">Bilar</asp:HyperLink>
-                        </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink><ul>
-                                <li>
-                                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="<%$ RouteUrl:routename=FavoritePage %>">Favorit lista</asp:HyperLink>
-                        </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="<%$ RouteUrl:routename=upload %>">Ladda upp</asp:HyperLink><ul>
-                                <li>
-                                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="<%$ RouteUrl:routename=Admin %>">Admin Sida</asp:HyperLink></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <%--Sök funktion button--%>
-                <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="Search" />
-                <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter bil modell" data-watermark="" Text=""></asp:TextBox>
-                <asp:Label ID="SearchResult" runat="server" CssClass="SearchResult" Visible="false"></asp:Label>
+                <ul id="menu_wrap" class="Black">
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>">HEM</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="<%$ RouteUrl:routename=AllCars %>">Bilar</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="<%$ RouteUrl:routename=FavoritePage %>">Favorit lista</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="<%$ RouteUrl:routename=upload %>">Ladda upp</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="<%$ RouteUrl:routename=Admin %>">Admin Sida</asp:HyperLink></li>
+                    <li class="search">
+                        <div id="tfheader">
+                            <%--Sök funktion button--%>
+                            <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter bil modell" data-watermark="" Text="" CssClass="tftextinput"></asp:TextBox>
+                            <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="tfbutton" />
+
+                            <asp:Label ID="SearchResult" runat="server" CssClass="SearchResult" Visible="false"></asp:Label>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
+
             <div id="navigation">
 
                 <ul>
@@ -190,20 +186,6 @@
                 <section class="content-wrapper main-content clear-fix">
                     <asp:ContentPlaceHolder runat="server" ID="MainContent" />
                     <asp:Label ID="searchLbl" runat="server" Text=""></asp:Label>
-                    <div id="showImgLayout">
-                        <%-- Resultatet av sök funktionen--%>
-                        <asp:Repeater ID="Repeater1" runat="server">
-                            <ItemTemplate>
-                                <div class="imgPhotoTitle">
-                                    <%#DataBinder.Eval(Container.DataItem, "Title")%>
-                                    <%#DataBinder.Eval(Container.DataItem, "ImgName")%>
-                                </div>
-                                <div id="buttonstyle">
-                                <asp:Image ImageUrl='<%# "Images/" + DataBinder.Eval(Container.DataItem, "ImgName") %>' ID="imgUserPhoto" runat="server" alt="bilder." CssClass="ImgSearchSize" /><br />
-                                    </div>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </div>
                 </section>
             </div>
             <div id="footer">
@@ -282,5 +264,6 @@
             window.location.hash = '';
 
     </script>
+
 </body>
 </html>
