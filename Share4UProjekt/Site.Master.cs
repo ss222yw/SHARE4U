@@ -38,7 +38,7 @@ namespace Share4UProjekt
                 Session["Message"] = value;
             }
         }
-        string url = HttpContext.Current.Request.Url.AbsoluteUri;
+    
         /// <summary>
         /// Hämtar access token för facebook inlogging system.
         /// </summary>
@@ -83,7 +83,7 @@ namespace Share4UProjekt
         }
 
 
-
+        string url = HttpContext.Current.Request.Url.AbsoluteUri;
         /// <summary>
         /// Sparar facebook access token i session så den kommer ihåg att man inloggad även om man flyttar mellan sidorna i websajten.
         /// </summary>
@@ -150,7 +150,7 @@ namespace Share4UProjekt
         protected void Login(object sender, EventArgs e)
         {
 
-            FaceBookConnect.Authorize("user_photos,email", url);
+            FaceBookConnect.Authorize("user_photos,email", Request.Url.AbsoluteUri.Split('?')[0]);
         }
 
         /// <summary>
@@ -184,6 +184,7 @@ namespace Share4UProjekt
                 Response.RedirectToRoute("SokResultat");
 
             }
+
 
         }
 

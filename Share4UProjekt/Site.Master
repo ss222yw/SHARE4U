@@ -18,7 +18,6 @@
     <div id="wrapper">
         <form runat="server">
             <div id="header">
-<%--                <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>--%>
                 <%--ShareCarsPics4U Logo--%>
                 <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>" ImageUrl="../Images2/save100.png"></asp:HyperLink>
                 <%-- Inloggning system via facebook--%>
@@ -50,6 +49,7 @@
                 <header>
                 </header>
             </div>
+            <div id="headerImage"></div>
             <%--Tagit en vis del css för göra menu--%>
             <div id="navigation1">
                 <ul id="menu_wrap" class="Black">
@@ -70,7 +70,7 @@
                     <li class="search">
                         <div id="tfheader">
                             <%--Sök funktion button--%>
-                            <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter bil modell" data-watermark="" Text="" CssClass="tftextinput"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter innehåll" data-watermark="" Text="" CssClass="tftextinput"></asp:TextBox>
                             <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="tfbutton" />
 
                             <asp:Label ID="SearchResult" runat="server" CssClass="SearchResult" Visible="false"></asp:Label>
@@ -259,11 +259,12 @@
 
     </div>
     <%-- Tagit koden från stackoverflow.--%>
-    <script type="text/javascript">
-        if (window.location.hash == "#_=_")
-            window.location.hash = '';
-
-    </script>
+<script>
+    if (window.location.hash == '#_=_') {
+        window.location.hash = '';
+        history.pushState('', document.title, window.location.pathname); 
+        e.preventDefault(); 
+    }</script>
 
 </body>
 </html>

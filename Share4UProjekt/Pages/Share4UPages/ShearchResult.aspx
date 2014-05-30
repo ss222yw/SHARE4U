@@ -23,5 +23,5 @@
                         </asp:Repeater>
                     </div>
     <br />
-   <asp:Button ID="BackButton1" runat="server" Text="Tillbaka"  CssClass="savebuttons"/>
+   <asp:HyperLink ID="HyperLink1" runat="server" Text="Tillbaka till startsidan" NavigateUrl='<%$ RouteUrl:routename=Default %>' CssClass="Msg"/>
 </asp:Content>

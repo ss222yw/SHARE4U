@@ -31,7 +31,6 @@
                 <%-- Tagit från facebook developer och ändrat så den passar min egen kod--%>
                 <div class="fb-comments" data-href="http://localhost:8317/comments/<%# Item.ImgName %>" data-numposts="5" data-colorscheme="dark" data-width="600"></div>
                 </div>
-         
             </span>
            
         </ItemTemplate>

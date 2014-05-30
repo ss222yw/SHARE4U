@@ -14,7 +14,7 @@ namespace Share4UProjekt.Model.DAL
         /// Metoden GetImagesDataByID hämtar bild namn, användarens id , kategori id , rubriken och vilken datum bilden är inlagd från sql server..
         /// </summary>
         /// <param name="imgID"></param>
-        /// <returns></returns>
+        /// <returns>null</returns>
         public Images GetImagesDataByID(int imgID)
         {
 
@@ -137,7 +137,7 @@ namespace Share4UProjekt.Model.DAL
         /// <param name="maximumRows"></param>
         /// <param name="startRowIndex"></param>
         /// <param name="totalRowCount"></param>
-        /// <returns></returns>
+        /// <returns>imgs</returns>
         public static IEnumerable<Images> GetImagesPageWise(int maximumRows, int startRowIndex, out int totalRowCount)
         {
             using (var conn = CreateConnection())
@@ -192,7 +192,7 @@ namespace Share4UProjekt.Model.DAL
         /// <param name="startRowIndex"></param>
         /// <param name="totalRowCount"></param>
         /// <param name="KategoriID"></param>
-        /// <returns></returns>
+        /// <returns>imgs</returns>
         public static IEnumerable<Images> GetImagesPageWiseByID(int maximumRows, int startRowIndex, out int totalRowCount, int KategoriID)
         {
             using (var conn = CreateConnection())
@@ -248,7 +248,7 @@ namespace Share4UProjekt.Model.DAL
         /// <param name="startRowIndex"></param>
         /// <param name="totalRowCount"></param>
         /// <param name="userid"></param>
-        /// <returns></returns>
+        /// <returns>imgs</returns>
         public static IEnumerable<Images> GetUsrImagesPageWiseByID(int maximumRows, int startRowIndex, out int totalRowCount, string userid)
         {
             using (var conn = CreateConnection())
@@ -297,12 +297,14 @@ namespace Share4UProjekt.Model.DAL
         }
 
         /// <summary>
-        /// Mtoden DisplaySearchResults hämtar information (rubiken , bild namn och vilken format är bilden av) för sök funktion.
+        /// Metoden DisplaySearchResults hämtar information (rubiken , bild namn och vilken format är bilden av) för sök funktion.
         /// </summary>
         /// <param name="strSearch"></param>
-        /// <returns></returns>
+        /// <returns>images</returns>
+       
         public IList<Images> DisplaySearchResults(string strSearch)
         {
+            
             using (SqlConnection conn = CreateConnection())
             {
                 try
@@ -327,6 +329,7 @@ namespace Share4UProjekt.Model.DAL
                         }
                     }
                     images.TrimExcess();
+                    counter = images.Count;
                     return images;
                 }
                 catch
@@ -335,8 +338,11 @@ namespace Share4UProjekt.Model.DAL
                 }
             }
         }
+        private static int counter;
+        public int Count
+        {
+            get { return counter; }
+        }
 
-        public int counter { get; set; }
-          
     }
 }

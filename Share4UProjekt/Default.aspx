@@ -6,7 +6,6 @@
     <link href="css/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <%--    <script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>--%>
     <script type="text/javascript" src="js/jquery.skitter.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -17,7 +16,7 @@
     <br />
     <br />
     <div id="TEXTDEFAULT">
-        <h2>Dela bilder som du tycker är Intressanta om bilar, få riktiga svar från människor över hela sverige  , och  
+        <h2>Dela bilder som du tycker är Intressanta om bilar, få riktiga svar från människor över hela Sverige  , och  
             upptäck vad som gör dig lycklig.</h2>
     </div>
     <br />

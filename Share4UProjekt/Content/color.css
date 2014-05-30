@@ -19,18 +19,21 @@ body {
 }
 
 #header {
-    color: white;
+    color: #FFF;
     width: 960px;
     float: left;
     padding: 10px;
     border: 1px solid #000;
-    height: 190PX;
-    margin: 10px 0px 5px 0px;
-    background: hsla(0, 0%, 14%, 0.69);
-    background-image: url(../Images2/header3.png);
+    height: 200px;
+    margin: 1px 0px 5px;
+    background: url('../Images2/header3.png') no-repeat scroll 100% center / contain rgba(35, 35, 35, 0.54);
+}
+#headerImage {
+    background-image: url(../Images2/header.jpg);
     background-repeat: no-repeat;
-    background-position: 100%;
-    background-size: contain;
+    height: 222px;
+    background-position-y: 10px;
+    background-size: cover;
 }
 
 #header1 {
@@ -100,6 +103,7 @@ body {
     background-color: hsla(0, 0%, 7%, 0.84);
     margin: 0px 0px 10px 0px;
     padding: 10px;
+
 }
 
 
@@ -133,7 +137,7 @@ div#TEXTDEFAULT {
 div#MainContent_ValidationSummary1 {
     float: right;
     margin-top: -39px;
-    margin-right: 796px;
+    margin-right: 755px;
     padding: 16px;
     margin-left: 9px;
     -moz-box-shadow: 0px 10px 14px -7px #3e7327;
@@ -154,7 +158,6 @@ div#MainContent_ValidationSummary1 {
     display: inline-block;
     color: hsl(0, 100%, 100%);
 }
-
 /*Tagit css styling från css online styling ändrat så den passar min sida*/
 .success {
     float: left;
@@ -267,11 +270,11 @@ input#MainContent_btnDelete {
 
 
 .btnLogin {
-height: 30px;
-Width: 140px;
-float: left;
-margin-left: 35px;
-margin-top: 168px;
+    height: 30px;
+    Width: 140px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 168px;
 }
 
 .btnLogout {
@@ -288,10 +291,10 @@ div.youtube {
 
 
 a#HyperLink46 {
-    float: right;
-    margin-left: -337px;
-    margin-right: -40px;
-    margin-top: 80px;
+float: right;
+margin-left: -337px;
+margin-right: -40px;
+margin-top: 90px;
 }
 
     a#HyperLink46 img {
@@ -483,11 +486,12 @@ span#MainContent_ImagesListView_DataPager {
 
 
 div#pnlFbUser {
-float: left;
-margin-top: 95px;
-color: rgb(174, 190, 255);
-margin-left: 36px;
+    float: left;
+    margin-top: 95px;
+    color: rgb(174, 190, 255);
+    margin-left: 36px;
 }
+
 .ShareCarsPics4ULogo img {
     margin: -88px 0px 0px 200px;
     position: absolute;
@@ -571,6 +575,10 @@ div#editLayout {
 
 div#showImgLayout {
     margin-left: 19%;
+}
+
+div#ErrorLayout {
+    margin-left: 24%;
 }
 
 
@@ -1623,8 +1631,8 @@ img#personalpic2 {
 }
 
 div#tfheader {
-margin-top: -2.9%;
-margin-right: 10px;
+    margin-top: -2.9%;
+    margin-right: 10px;
 }
 
 
@@ -1662,21 +1670,21 @@ input#Button1:active {
 /*Tagit från http://onlinehtmltools.com/menu-generator/#*/
 
 #menu_wrap {
-position: relative;
-margin-top: 0px;
-margin-left: auto;
-margin-right: auto;
-padding: 0;
-padding-right: 0px;
-width: 888px;
-height: 40px;
-list-style-type: none;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
--webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
--moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    position: relative;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    padding-right: 0px;
+    width: 888px;
+    height: 40px;
+    list-style-type: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
 .button a {

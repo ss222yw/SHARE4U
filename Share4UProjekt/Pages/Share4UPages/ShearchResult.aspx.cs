@@ -10,28 +10,42 @@ namespace Share4UProjekt.Pages.Share4UPages
 {
     public partial class ShearchResult : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            ImagesDAL dal = new ImagesDAL();
+
             if (Modell != null)
             {
-                ImagesDAL dal = new ImagesDAL();
-                searchLbl.Text = "Sökresultat för   (" + Modell + ")  : är {0}";
-                dal.DisplaySearchResults(Modell);
                 if (Modell != string.Empty)
                 {
                     Repeater1.DataSource = dal.DisplaySearchResults(Modell);
                     Repeater1.DataBind();
-                    BackButton1.Attributes.Add("onclick", "javascript:history.go(-1);return false");
+                    dal.DisplaySearchResults(Modell);
+                    if ((dal.Count) == 0)
+                    {
+                        searchLbl.Text = string.Format("Din sökresultat för   (" + Modell + ") gav tyvärr inga bilder.");
+                    }
+                    else if ((dal.Count) == 1)
+                    {
+                        searchLbl.Text = string.Format("Din sökresultat för   (" + Modell + ") gav bara en bild.");
+                    }
+                    else if ((dal.Count) > 1)
+                    {
+                        searchLbl.Text = string.Format("Din sökresultat för   (" + Modell + ") gav : " + " {0} ", (dal.Count) + " bilder.");
+                    }
+                }
+                else
+                {
+                    searchLbl.Text = "Du måste skriva i text rutan för att få resultat!!!";
                 }
             }
             else
             {
                 Response.RedirectToRoute("Default");
             }
-        
+
         }
         public string Modell { get { return ((SiteMaster)this.Master).Modell; } }
-
     }
 }
