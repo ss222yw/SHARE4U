@@ -27,7 +27,7 @@
     <label for="TitleTextBox" id="HeaderLabel" runat="server">Modell</label>
     <br />
     <%--    Textbox där skriver man rubrilken på en bild.--%>
-    <asp:TextBox ID="TitleTextBox" runat="server" Text="" MaxLength="25" CssClass="Header" />
+    <asp:TextBox ID="TitleTextBox" runat="server" Text="" MaxLength="25" CssClass="Header" onkeydown = "return (event.keyCode!=13);"/>
     <%--    validation för textboxen--%>
     <asp:RequiredFieldValidator ID="HeaderRequiredFieldValidator" runat="server"
         ErrorMessage="Modellen måste anges." ControlToValidate="TitleTextBox"

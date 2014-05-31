@@ -4,9 +4,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Meddlande</h2>
+              <h2>Meddelande</h2>
           <br />
+           <%--Label för rätt meddalnde--%>
+    <asp:Panel ID="ResponsePanel" runat="server" Visible="false">
+    <asp:Label ID="SuccessTest" Text="" runat="server"  CssClass="success" />
+         <asp:ImageButton ID="closeImg" runat="server" ImageUrl="~/Images2/delete.gif" CausesValidation="false" OnClick="closeImg_Click" />
+        </asp:Panel>
+    <asp:Label ID="Label1" Text="" runat="server"  CssClass="errors"  Visible="false"/>
+    <br />
+       <br />
+       <br />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors" />
+    <asp:RegularExpressionValidator ID="fuUploadRegularExpressionValidator" runat="server" ErrorMessage="Filen måste vara av formaten jpg, jpeg, gif, png." ControlToValidate="fuAttachment" Display="None" ValidationExpression=".*.(gif|jpg|jpeg|png|jpeg|GIF|JPG|PNG|JPEG)"></asp:RegularExpressionValidator>
+    <div id="showImgLayout2">
     <table>
         <tr>
             <td>
@@ -24,7 +35,7 @@
             <td>Titel:
             </td>
             <td>
-                <asp:TextBox ID="txtSubject" runat="server" placeholder="Rubrik"></asp:TextBox>
+                <asp:TextBox ID="txtSubject" runat="server" placeholder="Rubrik" onkeydown = "return (event.keyCode!=13);"></asp:TextBox><span>*</span>
                 <asp:RequiredFieldValidator ID="HeaderRequiredFieldValidator" runat="server"
                     ErrorMessage="Rubrik måste anges." ControlToValidate="txtSubject"
                     Display="None">
@@ -36,13 +47,13 @@
             </td>
         </tr>
         <tr>
-            <td>Meddlande:
+            <td>Meddelande:
             </td>
             <td>
-                <asp:TextBox ID="txtBody" runat="server" TextMode="MultiLine" Height="150" Width="200" placeholder="Skriv ditt meddlande här."></asp:TextBox>
+                <asp:TextBox ID="txtBody" runat="server" TextMode="MultiLine"  placeholder="Skriv ditt meddlande här." CssClass="message"></asp:TextBox><span>*</span>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                     ErrorMessage="Beskriv ditt meddlande" ControlToValidate="txtBody"
-                    Display="None">
+                    Display="None" >
                 </asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -62,12 +73,12 @@
             </td>
         </tr>
         <tr>
-            <td>LNU E-post:
+            <td>LNU student/Gmail E-post:
             </td>
             <td>
-                <asp:TextBox ID="txtEmail" runat="server" placeholder="ex@student.lnu.se/gmail.com"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" placeholder="ex@student.lnu.se/gmail.com" onkeydown = "return (event.keyCode!=13);"></asp:TextBox><span>*</span>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
-                    ErrorMessage="Skriv in din LNU epost" ControlToValidate="txtEmail"
+                    ErrorMessage="Skriv in din epost" ControlToValidate="txtEmail"
                     Display="None">
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
                         ErrorMessage="E-posten måste vara av denna format exampel@student.lnu.se eller exampel@gmail.com"
@@ -82,12 +93,12 @@
             </td>
         </tr>
         <tr>
-            <td>LNU Lösenord:
+            <td>Lösenord:
             </td>
             <td>
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="*****************"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="*****************" onkeydown = "return (event.keyCode!=13);"></asp:TextBox><span>*</span>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
-                    ErrorMessage="matta in din LNU lösen ord" ControlToValidate="txtPassword"
+                    ErrorMessage="Ange lösenord" ControlToValidate="txtPassword"
                     Display="None">
                 </asp:RequiredFieldValidator>
             </td>
@@ -99,10 +110,11 @@
         <tr>
             <td></td>
             <td>
-                <asp:Button ID="Button1" Text="Skicka" OnClick="SendEmail" runat="server" CssClass="savebuttons"  />
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>" CssClass="savebuttons">Tillbaka</asp:HyperLink>
+
+                <asp:Button ID="BSend" Text="Skicka" OnClick="SendEmail" runat="server" CssClass="savebuttons"  onkeydown = "return (event.keyCode!=13);"/>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>" CssClass="savebuttonsBack">Tillbaka</asp:HyperLink>
             </td>
         </tr>
     </table>
-
+    </div>
 </asp:Content>

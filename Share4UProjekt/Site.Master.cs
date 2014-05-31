@@ -82,6 +82,9 @@ namespace Share4UProjekt
             get { return modell; }
         }
 
+        
+
+             
 
         string url = HttpContext.Current.Request.Url.AbsoluteUri;
         /// <summary>
@@ -184,7 +187,7 @@ namespace Share4UProjekt
                 Response.RedirectToRoute("SokResultat");
 
             }
-
+            Panel1.DefaultButton = "Button1";
 
         }
 

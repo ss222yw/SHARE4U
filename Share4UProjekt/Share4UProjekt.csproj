@@ -371,7 +371,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Content\COLOR.css" />
+    <Content Include="Content\Color.css" />
     <Content Include="upload.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">

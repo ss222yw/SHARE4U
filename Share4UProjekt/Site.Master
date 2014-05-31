@@ -14,14 +14,19 @@
     <script type="text/javascript" src="js/jquery.clip.js"></script>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
-<body onkeydown="return (event.keyCode!=13)">
+<body>
+
     <div id="wrapper">
-        <form runat="server">
+        <form runat="server" id="form1">
             <div id="header">
+
+
+
+
                 <%--ShareCarsPics4U Logo--%>
                 <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>" ImageUrl="../Images2/save100.png"></asp:HyperLink>
                 <%-- Inloggning system via facebook--%>
-                <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/facebook-icon1.png" OnClick="Login" CssClass="btnLogin" CausesValidation="false" />
+                <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/facebook-icon1.png" OnClick="Login" CssClass="btnLogin" CausesValidation="false" onkeydown="return (event.keyCode!=13);" />
                 <asp:Label ID="Label2" runat="server">
                     <asp:Panel ID="pnlFbUser" runat="server" Visible="false">
                         <table>
@@ -37,7 +42,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:ImageButton ID="btnLogout" runat="server" ImageUrl="Images2/fb.png" OnClick="Logout" CssClass="btnLogout" CausesValidation="false" />
+                                    <asp:ImageButton ID="btnLogout" runat="server" ImageUrl="Images2/fb.png" OnClick="Logout" CssClass="btnLogout" CausesValidation="false" onkeydown="return (event.keyCode!=13);" />
                                 </td>
                             </tr>
                         </table>
@@ -49,30 +54,31 @@
                 <header>
                 </header>
             </div>
-            <div id="headerImage"></div>
             <%--Tagit en vis del css för göra menu--%>
             <div id="navigation1">
                 <ul id="menu_wrap" class="Black">
                     <li class="button">
-                        <asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>">HEM</asp:HyperLink></li>
+                        <asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>">Hem</asp:HyperLink></li>
                     <li class="button">
                         <asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="<%$ RouteUrl:routename=AllCars %>">Bilar</asp:HyperLink></li>
-                    <li class="button">
-                        <asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink></li>
-                    <li class="button">
-                        <asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
                     <li class="button">
                         <asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="<%$ RouteUrl:routename=FavoritePage %>">Favorit lista</asp:HyperLink></li>
                     <li class="button">
                         <asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="<%$ RouteUrl:routename=upload %>">Ladda upp</asp:HyperLink></li>
                     <li class="button">
+                        <asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
+                    <li class="button">
                         <asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="<%$ RouteUrl:routename=Admin %>">Admin Sida</asp:HyperLink></li>
                     <li class="search">
                         <div id="tfheader">
                             <%--Sök funktion button--%>
-                            <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter innehåll" data-watermark="" Text="" CssClass="tftextinput"></asp:TextBox>
-                            <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="tfbutton" />
+                            <asp:Panel ID="Panel1" runat="server" DefaultButton="Button1">
+                                <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter innehåll" data-watermark="" Text="" CssClass="tftextinput"></asp:TextBox>
 
+                                <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="tfbutton" />
+                            </asp:Panel>
                             <asp:Label ID="SearchResult" runat="server" CssClass="SearchResult" Visible="false"></asp:Label>
                         </div>
                     </li>
@@ -259,12 +265,12 @@
 
     </div>
     <%-- Tagit koden från stackoverflow.--%>
-<script>
-    if (window.location.hash == '#_=_') {
-        window.location.hash = '';
-        history.pushState('', document.title, window.location.pathname); 
-        e.preventDefault(); 
-    }</script>
+    <script>
+        if (window.location.hash == '#_=_') {
+            window.location.hash = '';
+            history.pushState('', document.title, window.location.pathname);
+            e.preventDefault();
+        }</script>
 
 </body>
 </html>

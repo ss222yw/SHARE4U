@@ -22,6 +22,15 @@ namespace Share4UProjekt {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
         /// HyperLink46 control.
         /// </summary>
         /// <remarks>
@@ -112,24 +121,6 @@ namespace Share4UProjekt {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink48;
         
         /// <summary>
-        /// HyperLink49 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink49;
-        
-        /// <summary>
-        /// HyperLink50 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink50;
-        
-        /// <summary>
         /// HyperLink51 control.
         /// </summary>
         /// <remarks>
@@ -148,6 +139,24 @@ namespace Share4UProjekt {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink52;
         
         /// <summary>
+        /// HyperLink49 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink49;
+        
+        /// <summary>
+        /// HyperLink50 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink50;
+        
+        /// <summary>
         /// HyperLink53 control.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace Share4UProjekt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink53;
+        
+        /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
         /// TextBox1 control.

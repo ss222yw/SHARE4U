@@ -26,15 +26,10 @@ body {
     border: 1px solid #000;
     height: 200px;
     margin: 1px 0px 5px;
+  
     background: url('../Images2/header3.png') no-repeat scroll 100% center / contain rgba(35, 35, 35, 0.54);
 }
-#headerImage {
-    background-image: url(../Images2/header.jpg);
-    background-repeat: no-repeat;
-    height: 222px;
-    background-position-y: 10px;
-    background-size: cover;
-}
+
 
 #header1 {
     float: right;
@@ -136,6 +131,31 @@ div#TEXTDEFAULT {
 /*Tagit css styling från css online styling ändrat så den passar min sida*/
 div#MainContent_ValidationSummary1 {
     float: right;
+    margin-top: -39px;
+    margin-right: 755px;
+    padding: 16px;
+    margin-left: 9px;
+    -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+    -webkit-box-shadow: 0px 10px 14px -7px hsl(341, 85%, 1%);
+    box-shadow: 0px 10px 14px -7px hsl(341, 2%, 48%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, hsl(343, 36%, 7%)), color-stop(1, hsl(336, 98%, 1%)));
+    background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background: -webkit-linear-gradient(top, hsl(348, 69%, 1%) 5%, hsl(346, 76%, 46%) 100%);
+    background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background: linear-gradient(to bottom, hsl(355, 95%, 37%) 5%, hsl(348, 100%, 37%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+    background-color: hsl(0, 100%, 100%);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid hsl(334, 76%, 49%);
+    display: inline-block;
+    color: hsl(0, 100%, 100%);
+}
+
+.errors {
+        float: right;
     margin-top: -39px;
     margin-right: 755px;
     padding: 16px;
@@ -382,39 +402,39 @@ a {
 
 /*Tagit css styling från css online styling ändrat så den passar min sida*/
 .editButtons {
-    -moz-box-shadow: inset 0px 1px 0px 0px #caefab;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
-    box-shadow: inset 0px 1px 0px 0px #caefab;
-    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
-    background: -moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
-    background-color: #77d42a;
-    -webkit-border-top-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    border-top-left-radius: 0px;
-    -webkit-border-top-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
-    border-top-right-radius: 0px;
-    -webkit-border-bottom-right-radius: 0px;
-    -moz-border-radius-bottomright: 0px;
-    border-bottom-right-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-bottomleft: 0px;
-    border-bottom-left-radius: 0px;
-    text-indent: 0;
-    border: 1px solid #268a16;
-    display: inline-block;
-    color: #306108;
-    font-family: Arial;
-    font-size: 15px;
-    font-weight: bold;
-    font-style: normal;
-    height: 40px;
-    line-height: 40px;
-    width: 100px;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 1px 1px 0px #aade7c;
+-moz-box-shadow: inset 0px 1px 0px 0px #caefab;
+-webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
+box-shadow: inset 0px 1px 0px 0px #caefab;
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+background: -moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+background-color: #77d42a;
+-webkit-border-top-left-radius: 0px;
+-moz-border-radius-topleft: 0px;
+border-top-left-radius: 0px;
+-webkit-border-top-right-radius: 0px;
+-moz-border-radius-topright: 0px;
+border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+-moz-border-radius-bottomright: 0px;
+border-bottom-right-radius: 0px;
+-webkit-border-bottom-left-radius: 0px;
+-moz-border-radius-bottomleft: 0px;
+border-bottom-left-radius: 0px;
+text-indent: 0;
+border: 1px solid #268a16;
+display: inline-block;
+color: #FFFFFF;
+font-family: Arial;
+font-size: 15px;
+font-weight: bold;
+font-style: normal;
+height: 40px;
+line-height: 40px;
+width: 100px;
+text-decoration: none;
+text-align: center;
+text-shadow: 1px 1px 0px #aade7c;
 }
 
     .editButtons:hover {
@@ -431,6 +451,43 @@ a {
 
 .cssShowCars {
     width: 600px;
+}
+
+
+.savebuttonsBack {
+height: 20px;
+  -moz-box-shadow: inset 0px 1px 0px 0px #cae3fc;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #cae3fc;
+    box-shadow: inset 0px 1px 0px 0px #cae3fc;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee) );
+    background: -moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+    background-color: #79bbff;
+    -webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-bottom-left-radius: 8px;
+    text-indent: 0px;
+    border: 1px solid #469df5;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Comic Sans MS;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    /*line-height: 22px;*/
+    width: 80px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0px #287ace;
 }
 
 /*Tagit css styling från css online styling ändrat så den passar min sida*/
@@ -1851,3 +1908,21 @@ li a:before, li a:after {
 .tfclear {
     clear: both;
 }
+
+
+
+.message {
+resize: none;
+Height:150px; 
+Width:200px;
+}
+
+
+
+
+div#showImgLayout2 {
+margin-left: -4%;
+}
+
+
+
