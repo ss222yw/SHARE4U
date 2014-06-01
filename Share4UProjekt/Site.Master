@@ -19,12 +19,8 @@
     <div id="wrapper">
         <form runat="server" id="form1">
             <div id="header">
-
-
-
-
                 <%--ShareCarsPics4U Logo--%>
-                <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>" ImageUrl="../Images2/save100.png"></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>" CssClass="HyperLink46"></asp:HyperLink>
                 <%-- Inloggning system via facebook--%>
                 <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/facebook-icon1.png" OnClick="Login" CssClass="btnLogin" CausesValidation="false" onkeydown="return (event.keyCode!=13);" />
                 <asp:Label ID="Label2" runat="server">

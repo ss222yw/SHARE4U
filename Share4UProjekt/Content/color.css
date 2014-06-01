@@ -19,15 +19,14 @@ body {
 }
 
 #header {
-    color: #FFF;
-    width: 960px;
-    float: left;
-    padding: 10px;
-    border: 1px solid #000;
-    height: 200px;
-    margin: 1px 0px 5px;
-  
-    background: url('../Images2/header3.png') no-repeat scroll 100% center / contain rgba(35, 35, 35, 0.54);
+color: hsl(0, 100%, 100%);
+width: 960px;
+float: left;
+padding: 10px;
+border: 1px solid hsl(0, 0%, 0%);
+height: 202px;
+margin: 1px 0px 5px;
+background: url('../Images2/headerFin.png') no-repeat scroll 100% center / contain hsla(0, 0%, 14%, 0.71);
 }
 
 
@@ -290,11 +289,11 @@ input#MainContent_btnDelete {
 
 
 .btnLogin {
-    height: 30px;
-    Width: 140px;
-    float: left;
-    margin-left: 35px;
-    margin-top: 168px;
+height: 30px;
+Width: 140px;
+float: left;
+margin-left: -8px;
+margin-top: 180px;
 }
 
 .btnLogout {
@@ -310,11 +309,11 @@ div.youtube {
 
 
 
-a#HyperLink46 {
+.HyperLink46 {
 float: right;
-margin-left: -337px;
-margin-right: -40px;
-margin-top: 90px;
+margin-top: 10%;
+width: 262px;
+height: 100px;
 }
 
     a#HyperLink46 img {
@@ -543,10 +542,11 @@ span#MainContent_ImagesListView_DataPager {
 
 
 div#pnlFbUser {
-    float: left;
-    margin-top: 95px;
-    color: rgb(174, 190, 255);
-    margin-left: 36px;
+float: left;
+margin-top: 105px;
+color: hsl(0, 100%, 100%);
+margin-left: -8px;
+font-weight: bold;
 }
 
 .ShareCarsPics4ULogo img {

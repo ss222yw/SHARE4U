@@ -215,6 +215,7 @@
     <Content Include="Images2\header1.png" />
     <Content Include="Images2\header2.png" />
     <Content Include="Images2\header3.png" />
+    <Content Include="Images2\headerFin.png" />
     <Content Include="Images2\karta.png" />
     <Content Include="Images2\klassiskaVolvo.JPG" />
     <Content Include="Images2\mail_icon.png" />
