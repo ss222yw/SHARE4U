@@ -12,6 +12,7 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/carFavicon.png" rel="shortcut icon" type="image/x-icon" />
     <script type="text/javascript" src="js/jquery.clip.js"></script>
+
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
@@ -58,20 +59,20 @@
                     <li class="button">
                         <asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="<%$ RouteUrl:routename=AllCars %>">Bilar</asp:HyperLink></li>
                     <li class="button">
-                        <asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="<%$ RouteUrl:routename=FavoritePage %>">Favorit lista</asp:HyperLink></li>
+                        <asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="<%$ RouteUrl:routename=FavoritePage %>">Favoritlista</asp:HyperLink></li>
                     <li class="button">
-                        <asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="<%$ RouteUrl:routename=upload %>">Ladda upp</asp:HyperLink></li>
+                        <asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="<%$ RouteUrl:routename=upload %>">Mina sidor</asp:HyperLink></li>
                     <li class="button">
                         <asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink></li>
                     <li class="button">
                         <asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
                     <li class="button">
-                        <asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="<%$ RouteUrl:routename=Admin %>">Admin Sida</asp:HyperLink></li>
+                        <asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="<%$ RouteUrl:routename=Admin %>">Admin</asp:HyperLink></li>
                     <li class="search">
                         <div id="tfheader">
                             <%--Sök funktion button--%>
                             <asp:Panel ID="Panel1" runat="server" DefaultButton="Button1">
-                                <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter innehåll" data-watermark="" Text="" CssClass="tftextinput"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter innehåll" data-watermark="" Text="" CssClass="tftextinput" MaxLength="25"></asp:TextBox>
 
                                 <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="tfbutton" />
                             </asp:Panel>
@@ -267,6 +268,7 @@
             history.pushState('', document.title, window.location.pathname);
             e.preventDefault();
         }</script>
+
 
 </body>
 </html>

@@ -48,7 +48,7 @@
     <div class="Contact2">
         <p>Här finner ni oss i Kalmar</p>
         <%--Tagit från google--%>
-        <a href="https://maps.google.se/maps?q=Rimsmedsv%C3%A4gen+40C,+393+52+Kalmar,+Sweden&amp;ie=UTF-8&amp;hq=&amp;hnear=0x4657d1bab325ea9d:0xfc5013a9ca91496a,Rimsmedsv%C3%A4gen+40C,+393+52+Kalmar&amp;gl=se&amp;ei=EzZpUsWIBcjQtAah0YDoBA&amp;sqi=2&amp;ved=0CDIQ8gEwAA" target="_blank">
+        <a href="https://www.google.se/maps/place/Linn%C3%A9universitetet+Inst+f%C3%B6r+kulturvetenskaper/@56.664981,16.348237,17z/data=!3m1!4b1!4m2!3m1!1s0x4657d179404d6f6b:0x4747c668c56942bb" target="_blank">
             <img src="../../Images2/karta.png" alt="Till oss">
         </a>
         </div>

@@ -19,6 +19,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections.Specialized;
+using System.Web.Services;
+using System.Web.Script.Services;
 
 namespace Share4UProjekt
 {

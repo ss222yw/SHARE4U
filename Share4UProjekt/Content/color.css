@@ -26,7 +26,8 @@ padding: 10px;
 border: 1px solid hsl(0, 0%, 0%);
 height: 202px;
 margin: 1px 0px 5px;
-background: url('../Images2/headerFin.png') no-repeat scroll 100% center / contain hsla(0, 0%, 14%, 0.71);
+background: url('../Images2/headerFin.png') no-repeat;
+background-color: hsla(0, 0%, 14%, 0.9);
 }
 
 
@@ -1926,3 +1927,20 @@ margin-left: -4%;
 
 
 
+input#txt_MainContent_txtPassword {
+width: 198px;
+margin-bottom: 10px;
+}
+
+
+
+input[type=text], textarea
+{
+    border: 1px solid #ccc;
+}
+input[type=text]:focus, textarea:focus
+{
+    color: white;
+background-color: black;
+    border: 1px solid blue;
+}

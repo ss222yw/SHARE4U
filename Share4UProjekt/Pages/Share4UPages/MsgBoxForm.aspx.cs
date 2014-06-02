@@ -45,6 +45,12 @@ namespace Share4UProjekt.Pages.Share4UPages
                 Session.Remove("Message");
             }
         }
+        //Tagit denna delen från http://www.aspsnippets.com/Articles/Show-Hide-Password-in-Password-TextBox-with-CheckBox-using-jQuery.aspx
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string password = Request.Form[txtPassword.UniqueID];
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + password + "');", true);
+        }
 
         protected void SendEmail(object sender, EventArgs e)
         {
@@ -96,7 +102,6 @@ namespace Share4UProjekt.Pages.Share4UPages
                     {
                         Label1.Visible = true;
                         Label1.Text = "Fel Lösenord eller e-post!Försök igen";
-                        //Response.RedirectToRoute("Msg");
                     }
                 }
 

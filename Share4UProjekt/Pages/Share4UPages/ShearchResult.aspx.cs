@@ -24,15 +24,15 @@ namespace Share4UProjekt.Pages.Share4UPages
                     dal.DisplaySearchResults(Modell);
                     if ((dal.Count) == 0)
                     {
-                        searchLbl.Text = string.Format("Din sökresultat för   (" + Modell + ") gav tyvärr inga bilder.");
+                        searchLbl.Text = string.Format("Din sökresultat för   " + "<mark>(" + Modell + ")</mark>" + " gav tyvärr inga bilder.");
                     }
                     else if ((dal.Count) == 1)
                     {
-                        searchLbl.Text = string.Format("Din sökresultat för   (" + Modell + ") gav bara en bild.");
+                        searchLbl.Text = string.Format("Din sökresultat för    " + "<mark>(" + Modell + ")</mark>" + "  gav bara en bild.");
                     }
                     else if ((dal.Count) > 1)
                     {
-                        searchLbl.Text = string.Format("Din sökresultat för   (" + Modell + ") gav : " + " {0} ", (dal.Count) + " bilder.");
+                        searchLbl.Text = string.Format("Din sökresultat för    " + "<mark>(" + Modell + ")</mark>" + " gav : " + " {0} ", (dal.Count) + " bilder.");
                     }
                 }
                 else
