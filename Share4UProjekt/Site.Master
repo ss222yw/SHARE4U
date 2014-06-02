@@ -12,7 +12,8 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/carFavicon.png" rel="shortcut icon" type="image/x-icon" />
     <script type="text/javascript" src="js/jquery.clip.js"></script>
-
+    <meta property="fb:admins" content="100008142217417"/>
+<meta property="fb:app_id" content="1407528266185362"/>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
@@ -252,6 +253,7 @@
         </script>
 
         <%--Tagit från facebook developer.--%>
+        <div id="fb-root"></div>
         <script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;

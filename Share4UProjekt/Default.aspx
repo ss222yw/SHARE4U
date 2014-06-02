@@ -12,12 +12,11 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1>Välkommen tiill ShareCarsPics4U</h1>
+    <h1>ShareCarsPics4U</h1>
     <br />
     <br />
     <div id="TEXTDEFAULT">
-        <h2>Dela bilder som du tycker är Intressanta om bilar, få riktiga svar från människor över hela Sverige  , och  
-            upptäck vad som gör dig lycklig.</h2>
+        <h2>Bilder av vackra bilar för olika typer av bilar kända bilar som Volvo, Mercedes, BMW, Porsche, Lamborghini, Toyota, Nissan, klassiska bilar, Ferrari och en massa andra kända typer av bilar. Du kan ladda upp egna bilder på bilar genom att trycka på Mina sidor övan sen trycka på knappen ladda upp.</h2>
     </div>
     <br />
     <br />
