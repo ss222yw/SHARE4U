@@ -33,7 +33,7 @@
                 </div>
              <div id="likeandshare">
                  <div class="fb-like" data-href="https://facebook.com/<%# Item.ImgName %>/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-                 <div class="fb-share-button" data-href="http://localhost:8317/Images//<%# Item.ImgName %>" data-type="button"></div>
+                 <div class="fb-share-button" data-href="http://sharecarpics4u-001-site1.smarterasp.net/Images/<%# Item.ImgName %>" data-type="button"></div>
              </div>
                 <asp:HyperLink ID="HyperLink1" runat="server" Text="Kommentar" NavigateUrl='<%# GetRouteUrl("ShowImage", new { id = Item.ImgID }) %>' CssClass="Green" />
             </span>

@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Share4UProjekt.SiteMaster" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>sharecarpicsforyou.net</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/carFavicon.png" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript" src="js/jquery.clip.js"></script>
+    <meta property="fb:admins" content="100008142217417"/>
+<meta property="fb:app_id" content="1407528266185362"/>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+
+    <div id="wrapper">
+        <form runat="server" id="form1">
+            <div id="header">
+                <%--ShareCarsPics4U Logo--%>
+                <asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>" CssClass="HyperLink46"></asp:HyperLink>
+                <%-- Inloggning system via facebook--%>
+                <asp:ImageButton ID="btnLogin" runat="server" ImageUrl="Images2/facebook-icon1.png" OnClick="Login" CssClass="btnLogin" CausesValidation="false" onkeydown="return (event.keyCode!=13);" />
+                <asp:Label ID="Label2" runat="server">
+                    <asp:Panel ID="pnlFbUser" runat="server" Visible="false">
+                        <table>
+                            <tr>
+                                <td>Hej:
+                            <asp:Label ID="lblUsrName" runat="server" Text=""></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Image ID="PImage" runat="server" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:ImageButton ID="btnLogout" runat="server" ImageUrl="Images2/fb.png" OnClick="Logout" CssClass="btnLogout" CausesValidation="false" onkeydown="return (event.keyCode!=13);" />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </asp:Label>
+                <asp:Label ID="lblSearch" runat="server" Text=""></asp:Label>
+                <div>
+                </div>
+                <header>
+                </header>
+            </div>
+            <%--Tagit en vis del css för göra menu--%>
+            <div id="navigation1">
+                <ul id="menu_wrap" class="Black">
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="<%$ RouteUrl:routename=deftest %>">Hem</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="<%$ RouteUrl:routename=AllCars %>">Bilar</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="<%$ RouteUrl:routename=FavoritePage %>">Favoritlista</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="<%$ RouteUrl:routename=upload %>">Mina sidor</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="<%$ RouteUrl:routename=Contact %>">Kontakta oss</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="<%$ RouteUrl:routename=About %>">Om oss</asp:HyperLink></li>
+                    <li class="button">
+                        <asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="<%$ RouteUrl:routename=Admin %>">Admin</asp:HyperLink></li>
+                    <li class="search">
+                        <div id="tfheader">
+                            <%--Sök funktion button--%>
+                            <asp:Panel ID="Panel1" runat="server" DefaultButton="Button1">
+                                <asp:TextBox ID="TextBox1" runat="server" AutoCompleteType="Search" TextMode="Search" placeholder="Sök efter innehåll" data-watermark="" Text="" CssClass="tftextinput" MaxLength="25"></asp:TextBox>
+
+                                <asp:Button ID="Button1" runat="server" Text="Sök" OnClick="Button1_Click" CausesValidation="false" CssClass="tfbutton" />
+                            </asp:Panel>
+                            <asp:Label ID="SearchResult" runat="server" CssClass="SearchResult" Visible="false"></asp:Label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="navigation">
+
+                <ul>
+                    <li>
+                        <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="<%$ RouteUrl:routename=Alfa Romeo %>" ImageUrl="Images2/BrandsImgs/Alfa Romeo.png" CssClass="carBrandsLogo">Alfa Romeo</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="<%$ RouteUrl:routename=Audi %>" ImageUrl="Images2/BrandsImgs/audi_reflex2.png" CssClass="carBrandsLogo">Audi</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="<%$ RouteUrl:routename=BMW %>" ImageUrl="Images2/BrandsImgs/bmw.png" CssClass="carBrandsLogo">BMW</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="<%$ RouteUrl:routename=Cadillac%>" ImageUrl="Images2/BrandsImgs/Cadillac.png" CssClass="carBrandsLogo">Cadillac</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="<%$ RouteUrl:routename=Chevrolet%>" ImageUrl="Images2/BrandsImgs/chofer.png" CssClass="carBrandsLogo">Chevrolet</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="<%$ RouteUrl:routename=Chrysler %>" ImageUrl="Images2/BrandsImgs/Chrysler.png" CssClass="carBrandsLogo">Chrysler</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="<%$ RouteUrl:routename=Citroën %>" ImageUrl="Images2/BrandsImgs/citroen.png" CssClass="carBrandsLogo">Citroën</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="<%$ RouteUrl:routename=Dodge %>" ImageUrl="Images2/BrandsImgs/dodge.png" CssClass="carBrandsLogo">Dodge</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="<%$ RouteUrl:routename=Ferrari %>" ImageUrl="Images2/BrandsImgs/Ferrari.png" CssClass="carBrandsLogo">Ferrari</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="<%$ RouteUrl:routename=Fiat %>" ImageUrl="Images2/BrandsImgs/Fiat.png" CssClass="carBrandsLogo">Fiat</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="<%$ RouteUrl:routename=Ford %>" ImageUrl="Images2/BrandsImgs/ford.png" CssClass="carBrandsLogo">Ford</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="<%$ RouteUrl:routename=Honda %>" ImageUrl="Images2/BrandsImgs/Honda.png" CssClass="carBrandsLogo">Honda</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="<%$ RouteUrl:routename=Hyundai %>" ImageUrl="Images2/BrandsImgs/Hyundai.png" CssClass="carBrandsLogo">Hyundai</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="<%$ RouteUrl:routename=Jaguar %>" ImageUrl="Images2/BrandsImgs/Jaguar.png" CssClass="carBrandsLogo">Jaguar</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="<%$ RouteUrl:routename=Jeep %>" ImageUrl="Images2/BrandsImgs/jeep.png" CssClass="carBrandsLogo">Jeep</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="<%$ RouteUrl:routename=Kia %>" ImageUrl="Images2/BrandsImgs/kia.gif" CssClass="carBrandsLogo">Kia</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="<%$ RouteUrl:routename=Land Rover %>" ImageUrl="Images2/BrandsImgs/Land Rover.png" CssClass="carBrandsLogo">Land Rover</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="<%$ RouteUrl:routename=Lexus %>" ImageUrl="Images2/BrandsImgs/lexus.png" CssClass="carBrandsLogo">Lexus</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="<%$ RouteUrl:routename=Mazda %>" ImageUrl="Images2/BrandsImgs/mazda.png" CssClass="carBrandsLogo">Mazda</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="<%$ RouteUrl:routename=Mercedes Benz %>" ImageUrl="Images2/BrandsImgs/benz.png" CssClass="carBrandsLogo">Mercedes Benz</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="<%$ RouteUrl:routename=Mini %>" ImageUrl="Images2/BrandsImgs/Mini.png" CssClass="carBrandsLogo">Mini</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="<%$ RouteUrl:routename=Mitsubishi %>" ImageUrl="Images2/BrandsImgs/Mitsubishi.gif" CssClass="carBrandsLogo">Mitsubishi</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="<%$ RouteUrl:routename=Nissan %>" ImageUrl="Images2/BrandsImgs/nissan.png" CssClass="carBrandsLogo">Nissan</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="<%$ RouteUrl:routename=Opel %>" ImageUrl="Images2/BrandsImgs/opel.png" CssClass="carBrandsLogo">Opel</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="<%$ RouteUrl:routename=Peugeot %>" ImageUrl="Images2/BrandsImgs/pego.png" CssClass="carBrandsLogo">Peugeot</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="<%$ RouteUrl:routename=Porsche %>" ImageUrl="Images2/BrandsImgs/Porsche.png" CssClass="carBrandsLogo">Porsche</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="<%$ RouteUrl:routename=Renault %>" ImageUrl="Images2/BrandsImgs/renault.png" CssClass="carBrandsLogo">Renault</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="<%$ RouteUrl:routename=SAAB %>" ImageUrl="Images2/BrandsImgs/saab.png" CssClass="carBrandsLogo">SAAB</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="<%$ RouteUrl:routename=SEAT %>" ImageUrl="Images2/BrandsImgs/SEAT.png" CssClass="carBrandsLogo">SEAT</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="<%$ RouteUrl:routename=Skoda %>" ImageUrl="Images2/BrandsImgs/skoda.png" CssClass="carBrandsLogo">Skoda</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="<%$ RouteUrl:routename=Smart %>" ImageUrl="Images2/BrandsImgs/Smart.png" CssClass="carBrandsLogo">Smart</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="<%$ RouteUrl:routename=Subaru %>" ImageUrl="Images2/BrandsImgs/subaru.png" CssClass="carBrandsLogo">Subaru</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink40" runat="server" NavigateUrl="<%$ RouteUrl:routename=Suzuki %>" ImageUrl="Images2/BrandsImgs/suzuki.png" CssClass="carBrandsLogo">Suzuki</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink41" runat="server" NavigateUrl="<%$ RouteUrl:routename=Toyota %>" ImageUrl="Images2/BrandsImgs/toyota.png" CssClass="carBrandsLogo">Toyota</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink42" runat="server" NavigateUrl="<%$ RouteUrl:routename=Volkswagen %>" ImageUrl="Images2/BrandsImgs/volkswagen.png" CssClass="carBrandsLogo">Volkswagen</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="<%$ RouteUrl:routename=VOLVO %>" ImageUrl="Images2/BrandsImgs/volvoref.png" CssClass="carBrandsLogo">Volvo</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink45" runat="server" NavigateUrl="<%$ RouteUrl:routename=Klassika %>" ImageUrl="Images2/BrandsImgs/Classic.png" CssClass="carBrandsLogo">Klassiska bilar</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="<%$ RouteUrl:routename=Ovriga %>" ImageUrl="Images2/BrandsImgs/Övriga.png" CssClass="carBrandsLogo">Övriga</asp:HyperLink></li>
+                </ul>
+
+            </div>
+            <%--ScriptManager--%>
+            <asp:Label ID="lblCounter" runat="server"></asp:Label>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                <Scripts>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="jquery.ui.combined" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                </Scripts>
+            </asp:ScriptManager>
+
+            <div id="rightcolumn">
+                <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                <section class="content-wrapper main-content clear-fix">
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                    <asp:Label ID="searchLbl" runat="server" Text=""></asp:Label>
+                </section>
+            </div>
+            <div id="footer">
+                <%--Logo för instagram--%>
+                <a href="http://instagram.com/share4u.me" target="_blank" title="följ oss på instagram!">
+                    <img id="inst" src="../../Images2/inst.png" alt="Klicka här för att besöka vår instagram-sida" width="30" height="30" /></a>
+
+
+                <p>&copy; <%: DateTime.Now.Date.ToString("yyyy/MM/dd") %> - Sahib Sahib ss222yw UD13 <a href="http://www.lnu.se/" target="_blank">LNU</a>.</p>
+
+                <%--Facebook logo för följ--%>
+                <%-- Tagit från facebook developer och ändrat så den passar min egen kod--%>
+                <div class="fb-follow" data-href="https://www.facebook.com/sahib.alhasni" data-colorscheme="dark" data-layout="standard" data-show-faces="false"></div>
+                <div id="showImgLayout1">
+                    <%-- Facebook Like box--%>
+                    <%-- Tagit från facebook developer och ändrat så den passar min egen kod--%>
+                    <div id="fbplace">
+                        <div class="fb-like-box" data-href="https://www.facebook.com/pages/Share4U/646540078759230?skip_nax_wizard=true" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <%--Tagit från stack over flow och implmenterat i min egen kod.--%>
+        <script type="text/javascript">
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_initializeRequest(prm_InitializeRequest);
+            prm.add_endRequest(prm_EndRequest);
+            function prm_InitializeRequest(sender, args) {
+                var panelProg = $get('divImage');
+                panelProg.style.display = '';
+                var upload = $get('btnUpload');
+                upload.style.display = '';
+                var del = $get('LinkButton2');
+                del.style.display = '';
+                $get(args._postBackElement.id).disabled = false;
+            }
+            function prm_EndRequest(sender, args) {
+                var panelProg = $get('divImage');
+                panelProg.style.display = 'none';
+                $get(sender._postBackSettings.sourceElement.id).disabled = true;
+            }
+        </script>
+
+        <%--Tagit från stack over flow.--%>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#main-image-box').children().removeClass('facets').end().facets({
+                    control: 'ul#mainlevel',
+                    clipSpacing: 1,
+                    animationSpeed: 1000,
+                    beforeMax: function (index) {
+                        $('#main-image-box .clip:eq(' + index + ') .container').show();
+                    },
+                    beforeMin: function (index) {
+                        $('#main-image-box .clip:eq(' + index + ') .container').hide();
+                    }
+                });
+            });
+        </script>
+
+        <%--Tagit från facebook developer.--%>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&appId=1407528266185362&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    </div>
+    <%-- Tagit koden från stackoverflow.--%>
+    <script>
+        if (window.location.hash == '#_=_') {
+            window.location.hash = '';
+            history.pushState('', document.title, window.location.pathname);
+            e.preventDefault();
+        }</script>
+
+
+</body>
+</html>

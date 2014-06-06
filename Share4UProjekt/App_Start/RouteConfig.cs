@@ -14,7 +14,7 @@ namespace Share4UProjekt
 
             routes.MapPageRoute("Default", "", "~/Default.aspx");
 
-            routes.MapPageRoute("deftest", "HemSida", "~/Default.aspx");
+            routes.MapPageRoute("deftest", "", "~/Default.aspx");
 
             routes.MapPageRoute("Admin", "Admin", "~/Admin.aspx");
 
